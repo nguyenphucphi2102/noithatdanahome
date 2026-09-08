@@ -1,0 +1,315 @@
+/* ===================================================================
+   css_tinsanphamact.css
+   Trang danh sách sản phẩm/dịch vụ theo danh mục (tin_sanphamact)
+   Tông màu đồng bộ với header: than chì (#231F20) + đỏ mận (#8A0505)
+   (Không dùng CSS variable, giá trị viết trực tiếp vào từng selector)
+   Font: dùng lại "Roboto" và "Be Vietnam Pro" đã được load sẵn ở index.php
+   =================================================================== */
+
+/* ---------- Breadcrumb ---------- */
+.eblog-breadcrumb-area {
+  background: linear-gradient(90deg, #231f20, #8a0505);
+  padding: 22px 0;
+  margin-bottom: 0;
+}
+
+.eblog-breadcrumb-area .breadcrumb-inner .meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+
+.eblog-breadcrumb-area .meta a {
+  color: #d9d3ce;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.eblog-breadcrumb-area .meta a:hover {
+  color: #ffffff;
+}
+
+.eblog-breadcrumb-area .meta a.last {
+  color: #ffffff;
+  font-weight: 600;
+  position: relative;
+}
+
+.eblog-breadcrumb-area .meta a.last::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4fa8c9;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.eblog-breadcrumb-area .meta img {
+  width: 12px;
+  opacity: 0.55;
+  filter: invert(1);
+}
+
+/* ---------- Section wrapper ---------- */
+.eblog-featured-post-area {
+  background: #f2f1ee;
+  padding: 46px 0 60px;
+}
+
+/* ---------- Tiêu đề danh mục ---------- */
+.eblog-featured-post-area h1.mb-4 {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #201d1d;
+  margin-bottom: 30px;
+  padding-bottom: 16px;
+  position: relative;
+}
+
+.eblog-featured-post-area h1.mb-4 a.last {
+  color: #201d1d;
+  text-decoration: none;
+}
+
+.eblog-featured-post-area h1.mb-4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 64px;
+  height: 4px;
+  background: #8a0505;
+  border-radius: 2px;
+}
+
+.eblog-featured-post-area h1.mb-4::before {
+  content: "";
+  position: absolute;
+  left: 70px;
+  bottom: 0;
+  width: 18px;
+  height: 4px;
+  background: #4fa8c9;
+  border-radius: 2px;
+}
+
+/* ---------- Thẻ sản phẩm / dịch vụ ---------- */
+.featured-post .row.g-4 > [class*="col-"] {
+  margin-bottom: 6px;
+}
+
+.eblog-featured-news.style-two.big {
+  background: #ffffff;
+  border: 1px solid #e4e2de;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 18px rgba(35, 31, 32, 0.08);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.eblog-featured-news.style-two.big:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(35, 31, 32, 0.16);
+  border-color: transparent;
+}
+
+.eblog-featured-news .image-area {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 2.6;
+  background: #eceae7;
+}
+
+.eblog-featured-news .image-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+/* hiệu ứng "phủ sương lạnh" khi hover — gợi nhắc chủ đề điện lạnh */
+.eblog-featured-news .image-area::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(79, 168, 201, 0) 40%,
+    rgba(79, 168, 201, 0.35) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.eblog-featured-news.style-two.big:hover .image-area img {
+  transform: scale(1.08);
+  filter: saturate(1.05);
+}
+
+.eblog-featured-news.style-two.big:hover .image-area::after {
+  opacity: 1;
+}
+
+.eblog-featured-news .blog-content {
+  padding: 16px 18px 20px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.eblog-featured-news .heading-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.45;
+  margin: 0;
+  height: auto !important;
+  text-align: left !important;
+}
+
+.eblog-featured-news .heading-title a.title-animation {
+  color: #2c2a29;
+  text-decoration: none;
+  background-image: linear-gradient(#8a0505, #8a0505);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 2px;
+  transition:
+    background-size 0.3s ease,
+    color 0.3s ease;
+  padding-bottom: 2px;
+}
+
+.eblog-featured-news .heading-title a.title-animation:hover {
+  color: #8a0505;
+  background-size: 100% 2px;
+}
+
+/* nút Load More */
+.button-area {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.button-area .tp-btn {
+  display: inline-block;
+  padding: 11px 30px;
+  background: #231f20;
+  color: #fff;
+  border-radius: 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background 0.25s ease;
+}
+
+.button-area .tp-btn:hover {
+  background: #8a0505;
+}
+
+/* ---------- Phân trang ---------- */
+.bgphantranga {
+  margin-top: 8px;
+  padding-top: 18px;
+  border-top: 1px solid #e4e2de;
+}
+
+.phantrang {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #7a7674;
+}
+
+.phantrang a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 30px;
+  padding: 0 6px;
+  margin: 0 3px !important;
+  border-radius: 6px;
+  color: #2c2a29 !important;
+  background: #ffffff;
+  border: 1px solid #e4e2de;
+  text-decoration: none !important;
+  font-weight: 500;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.phantrang a:hover {
+  background: #8a0505;
+  border-color: #8a0505;
+  color: #fff !important;
+}
+
+.phantrang b {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  background: #231f20;
+  color: #fff;
+  margin: 0 3px;
+}
+
+/* ---------- Sidebar ---------- */
+.eblog-right-sidebar {
+  background: #ffffff;
+  border: 1px solid #e4e2de;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(35, 31, 32, 0.08);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991.98px) {
+  .eblog-featured-post-area {
+    padding: 32px 0 44px;
+  }
+  .eblog-featured-post-area h1.mb-4 {
+    font-size: 24px;
+  }
+  .eblog-right-sidebar {
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .eblog-featured-news .blog-content {
+    padding: 14px;
+  }
+  .eblog-featured-news .heading-title {
+    font-size: 15px;
+  }
+  .phantrang a,
+  .phantrang b {
+    min-width: 26px;
+    height: 26px;
+    font-size: 13px;
+  }
+}

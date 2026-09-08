@@ -1,0 +1,616 @@
+@charset "UTF-8";
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+  font-size: 16px;
+  line-height: 28px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Open Sans", sans-serif;
+  color: #333333;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", sans-serif;
+  color: #333333;
+  font-weight: 600;
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+h2 {
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  h2 {
+    font-size: 26px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 767px) {
+  h3 {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a,
+button {
+  color: inherit;
+  display: inline-block;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a,
+button,
+img,
+input,
+span {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #cea679;
+}
+
+ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.section,
+.main-wrapper {
+  float: left;
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .container {
+    max-width: 450px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .container {
+    max-width: 300px;
+  }
+}
+
+/*----------------------------------------*/
+/*  01. Page Banner Section (banner "Về Chúng Tôi")
+/*----------------------------------------*/
+.page-banner-section {
+  padding: 30px 0px;
+  position: relative;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1499px) {
+  .page-banner-section {
+    padding: 30px 0 30px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .page-banner-section {
+    padding: 60px 0 70px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .page-banner-section {
+    padding: 50px 0 60px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .page-banner-section {
+    padding: 45px 0 50px;
+  }
+}
+
+.page-banner h1 {
+  font-size: 48px;
+  color: #333333;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .page-banner h1 {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .page-banner h1 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .page-banner h1 {
+    font-size: 24px;
+  }
+}
+
+.page-breadcrumb {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.page-breadcrumb li {
+  color: #333333;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1;
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 575px) {
+  .page-breadcrumb li {
+    font-size: 16px;
+  }
+}
+
+.page-breadcrumb li::after {
+  content: "-";
+  margin: 0 6px;
+}
+
+.page-breadcrumb li:last-child::after {
+  display: none;
+}
+
+.page-breadcrumb li a:hover {
+  color: #cea679;
+}
+
+/*----------------------------------------*/
+/*  02. Section Title (dùng cho tiêu đề "Tầm Nhìn & Sứ Mệnh")
+/*----------------------------------------*/
+.section-title h2 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.section-title h2 span {
+  color: #cea679;
+}
+
+.section-title p {
+  font-size: 16px;
+  line-height: 22px;
+  max-width: 635px;
+  margin-top: 15px;
+}
+
+.section-title.text-center {
+  text-align: center;
+  background-position: top center;
+}
+
+.section-title.text-center p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*----------------------------------------*/
+/*  03. About Page — nội dung riêng
+        (COMPLEMENTARY CSS FOR ABOUT PAGE - DANAHOME CO.)
+/*----------------------------------------*/
+
+/* Định dạng đoạn văn bản giới thiệu */
+.style-about-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555555;
+  margin-bottom: 15px;
+}
+
+/* Khối thông số Row Stats */
+.row-stats h3 {
+  line-height: 1;
+}
+
+/* Thẻ card Tầm nhìn - Sứ mệnh - Giá trị */
+.about-vision-card {
+  background: #ffffff;
+  padding: 40px 25px;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+
+.about-vision-card .card-icon {
+  font-size: 38px;
+  color: #cea679;
+  margin-bottom: 20px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.about-vision-card h3 {
+  font-size: 19px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.about-vision-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0;
+}
+
+/* Hiệu ứng di chuột thẻ tầm nhìn */
+.about-vision-card:hover {
+  transform: translateY(-8px);
+  border-bottom-color: #cea679;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.about-vision-card:hover .card-icon {
+  transform: scale(1.1);
+}
+
+/* Danh sách ưu điểm xưởng gỗ */
+.about-factory-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-factory-list li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444444;
+}
+
+.about-factory-list li i {
+  color: #cea679;
+  font-size: 16px;
+  margin-right: 12px;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+/* Nút bấm tại khối Hồ sơ năng lực */
+.about-profile-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-about-gold {
+  background-color: #cea679;
+  color: #ffffff !important;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 2px solid #cea679;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-about-gold:hover {
+  background-color: #b58d5f;
+  border-color: #b58d5f;
+  transform: translateY(-2px);
+}
+
+.btn-about-outline {
+  background-color: transparent;
+  color: #cea679 !important;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 2px solid #cea679;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-about-outline:hover {
+  background-color: #cea679;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+/* Căn chỉnh khoảng cách responsive mobile */
+@media (max-width: 767px) {
+  .about-profile-buttons a {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+}
+
+/*----------------------------------------*/
+/*  04. Đường kẻ phân cách (mượn từ Footer CSS)
+        Dùng làm divider giữa 2 section "Xưởng sản xuất" và
+        "Hồ sơ năng lực" trong about-content.html
+/*----------------------------------------*/
+.ftr__accent-bar {
+  height: 4px;
+  background: linear-gradient(90deg, #4f633f 0%, #145f66 50%, #d5b579 100%);
+}
+
+/*----------------------------------------*/
+/*  05. Nút Back to top
+/*----------------------------------------*/
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 46px;
+  height: 46px;
+  line-height: 44px;
+  background-color: #ffffff;
+  color: #333333;
+  border: 2px solid #444444;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10040;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  outline: none;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background-color: #cea679;
+  color: #ffffff;
+  border-color: #cea679;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 575px) {
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    font-size: 16px;
+  }
+}
+
+/*----------------------------------------*/
+/*  06. Responsive container (đồng bộ với các trang khác)
+/*----------------------------------------*/
+@media only screen and (max-width: 991px) {
+  .container,
+  .container-fluid {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container,
+  .container-fluid {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .container,
+  .container-fluid {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}
+/* .img-fluid {
+  max-width: 100%;
+  height: 450px;
+} */
+/* =========================================================
+   CSS SECTION TÍNH NĂNG / ƯU ĐIỂM (DANAHOME FEATURES)
+========================================================= */
+.features-section {
+  background-color: #fbfbfd;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.bg-custom-red {
+  background-color: #e63946 !important;
+}
+
+.text-custom-red {
+  color: #e63946 !important;
+}
+
+.feature-card {
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Biểu tượng Icon dạng tròn mờ */
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  background-color: rgba(230, 57, 70, 0.12);
+  color: #e63946;
+  font-size: 24px;
+}
+
+/* Họa tiết vòng tròn đồng tâm ở góc dưới phải thẻ */
+.feature-card::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 110px;
+  height: 110px;
+  background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='120' cy='120' r='110' stroke='%23e63946' stroke-width='1.5' stroke-opacity='0.15'/%3E%3Ccircle cx='120' cy='120' r='85' stroke='%23e63946' stroke-width='1.5' stroke-opacity='0.15'/%3E%3Ccircle cx='120' cy='120' r='60' stroke='%23e63946' stroke-width='1.5' stroke-opacity='0.15'/%3E%3Ccircle cx='120' cy='120' r='35' stroke='%23e63946' stroke-width='1.5' stroke-opacity='0.15'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  pointer-events: none;
+}
+
+.feature-arrow {
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.feature-card:hover .feature-arrow {
+  transform: translateX(5px);
+}
+
+/* =========================================================
+   RESPONSIVE MEDIA QUERIES
+========================================================= */
+
+/* Tablet & Màn hình trung bình (< 992px) */
+@media (max-width: 991.98px) {
+  .features-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .features-section h2 {
+    font-size: 1.75rem !important;
+  }
+}
+
+/* Điện thoại di động (< 768px) */
+@media (max-width: 767.98px) {
+  .features-section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .feature-card {
+    padding: 1.25rem !important; /* Thu gọn khoảng cách lề trong thẻ */
+  }
+  .feature-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
+  .feature-card::after {
+    width: 85px;
+    height: 85px;
+    opacity: 0.6; /* Làm mờ nhẹ họa tiết để tránh đè chữ trên màn nhỏ */
+  }
+}
+
+/* Điện thoại màn hình nhỏ (< 576px) */
+@media (max-width: 575.98px) {
+  .features-section h2 {
+    font-size: 1.4rem !important;
+  }
+  .feature-card {
+    flex-direction: column; /* Đổi icon lên trên nội dung trên di động */
+    align-items: flex-start !important;
+  }
+}

@@ -1,0 +1,743 @@
+/*about*/
+.about {
+margin-top: 35px;
+}
+
+.about .container {
+    display: flex;
+    align-items: stretch;
+}
+
+/* LEFT */
+.about .about-img {
+    position: relative;
+    width: 50%;
+}
+
+.about .about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TEXT OVERLAY */
+.about .overlay-text {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    color: #fff;
+}
+
+.about .overlay-text .text-title-1 {
+    font-size: 32px;
+    font-weight: 600;
+    padding-bottom:20px;
+}
+
+.about .overlay-text .text-title-2 {
+    font-size: 60px;
+    font-weight: 800;
+}
+
+/* RIGHT */
+.about .about-content {
+    width: 50%;
+    padding: 20px;
+
+}
+
+.about .about-content .item p {
+  color: #c00;
+    font-size: 25px;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.about .about-content p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+    text-align: justify;
+    font-size: 17px;
+}
+
+.about .btn {
+    display: inline-block;
+    background: #c00;
+    color: #fff;
+    padding: 12px 24px;
+    margin: 20px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    font-size:18px;
+}
+
+.about .btn:hover {
+    background: #e65a1f00;
+    border: 1px solid #c00;
+    color:#c00;
+}
+
+/* STATS */
+.about .stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.about .stats .item h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.about .stats .item span {
+    font-size: 16px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .about .about-img {
+        padding-bottom:20px;
+        width: 100%;
+    }
+
+    .about .about-content {
+        width: 100%;
+        padding: 0px;
+    }
+    
+    .overlay-text{
+        display:none;
+    }
+
+
+    .about .stats .item span {
+        font-size: 15px;
+    }
+
+    .about-img,
+    .about-content {
+        width: 100%;
+    }
+
+    .about .about-img {
+        height: 300px;
+    }
+
+    .about .overlay-text {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .about .overlay-text .text-title-2 {
+        font-size: 36px;
+    }
+
+    .about .overlay-text .text-title-1 {
+        font-size: 22px;
+    }
+
+    .about .stats {
+        gap: 55px;
+    }
+}
+
+
+.about .about-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px; /* bo góc */
+}
+
+.about .about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    border-radius: 16px;
+
+    /* bóng nhẹ */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+
+    transition: 0.5s ease;
+}
+
+/* hover zoom nhẹ */
+.about .about-img:hover img {
+    transform: scale(1.07);
+}
+
+/*tin thành lập*/
+
+.news-thanhlap{
+    padding:40px 0;
+}
+
+/* TITLE */
+.news-thanhlap .title{
+    color:#c00;
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:30px;
+}
+
+
+
+/* FEATURED */
+.news-thanhlap .featured{
+    display:flex;
+    gap:25px;
+    margin-bottom:40px;
+}
+
+.news-thanhlap .featured-img{
+    flex:1;
+}
+
+.news-thanhlap .featured-img img{
+    width:100%;
+    border-radius:10px;
+    height: 350px;
+}
+
+.news-thanhlap .featured-content{
+    flex:1;
+}
+
+.news-thanhlap .featured-content h3{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.news-thanhlap .featured-content .date{
+    color:#999;
+    margin-bottom:10px;
+    font-size:14px;
+}
+
+.news-thanhlap .featured-content p{
+    margin-bottom:15px;
+    line-height:1.6;
+}
+
+.news-thanhlap .btn{
+    background:#c00;
+    color:#fff;
+    padding:10px 18px;
+    text-decoration:none;
+    border-radius:5px;
+    display:inline-block;
+    transition: all 0.3s ease;
+}
+
+
+.news-thanhlap .btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* LIST */
+.news-thanhlap .news-list{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.news-thanhlap .item img{
+    width:100%;
+    border-radius:8px;
+    margin-bottom:10px;
+}
+
+.news-thanhlap .item h3{
+    font-size:17px;
+    margin-bottom:5px;
+    line-height: 25px;
+}
+
+.news-thanhlap .item .date{
+    font-size:14px;
+    color:#999;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+    .news-thanhlap{
+        padding:20px 0;
+    }
+
+    .news-thanhlap .featured{
+        flex-direction:column;
+    }
+
+    .news-thanhlap .news-list{
+        grid-template-columns:1fr;
+    }
+
+    .news-thanhlap .title{
+        font-size:22px;
+    }
+    .news-thanhlap .item{
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    }
+}
+
+.section-banner{
+    padding:0 0 40px 0;
+}
+
+
+/*tin tức*/
+    
+    .card-tintuc{
+        padding: 10px;
+        border-radius: 10px;
+        cursor:pointer;
+    }
+
+    
+    .card-tintuc:hover{
+        transform:translateY(-8px);
+    }
+    
+    .serv-flex {
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .art-1 {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .art-1 img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 10px;
+        padding-bottom: 0!important;
+    }
+
+    .art-1 h3 {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 24px;
+        flex-grow: 1;
+        color:#c00 !important;
+    }
+    .art-1 p {
+        margin-top:0 !important;
+    }
+
+    /* Mobile fix */
+    @media (max-width: 575.98px) {
+        .serv-flex {
+            padding: 10px;
+        }
+
+        .art-1 h3 {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+
+
+/*HÌNH ẢNH 2 HINH ĐẠI VIỆT*/
+
+
+/* ===== SECTION ===== */
+.section-banner {
+    padding: 20px 10px;
+}
+
+/* CONTAINER CANH GIỮA */
+.banner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* ITEM */
+.banner-item {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* IMAGE */
+.banner-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+
+    transition: 0.4s ease;
+}
+
+/* HOVER */
+.banner-item:hover img {
+    transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .banner-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/*LÝ DO NÊN CHỌN ĐẠI VIỆT*/
+
+/* ===== SECTION ===== */
+.why {
+  position: relative;
+  padding: 50px 20px 40px;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* ===== NỀN CHỈ 50% TRÊN ===== */
+.why::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 50%;
+  background: url('../hinhmenu/gioithieu-congty.jpg') center/cover no-repeat;
+  z-index: 1;
+}
+
+/* overlay tối */
+.why::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 50%;
+  background: rgba(0,0,0,0.55);
+  z-index: 2;
+}
+
+/* ===== HEADER ===== */
+.why__header {
+  position: relative;
+  z-index: 3;
+  max-width: 750px;
+  margin: auto;
+}
+
+.why__header h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  font-family: roboto;
+  line-height:1.5;
+  color:#fff;
+}
+
+.why__header p {
+  font-size: 17px;
+  opacity: 0.9;
+}
+
+/* ===== LIST (CARD BOX) ===== */
+.why__list {
+  position: relative;
+  z-index: 4;
+
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+
+  /* 👉 CARD ĐÈ LÊN NỀN */
+  transform: translateY(-60px);
+}
+
+/* ===== CARD ===== */
+.why__card {
+  padding: 50px 25px;
+  color: #333;
+  border-right: 1px solid #eee;
+
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.why__list li:last-child .why__card {
+  border-right: none;
+}
+
+/* delay animation */
+.why__list li:nth-child(2) .why__card { animation-delay: .2s; }
+.why__list li:nth-child(3) .why__card { animation-delay: .4s; }
+.why__list li:nth-child(4) .why__card { animation-delay: .6s; }
+
+/* ===== ICON ===== */
+.why__icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 18px;
+}
+
+/* ===== TITLE ===== */
+.why__card h3 {
+  color: #d60000;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* ===== TEXT ===== */
+.why__card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===== HOVER ===== */
+.why__card:hover {
+  transform: translateY(-8px) scale(1.05);
+  transition: 0.3s ease;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+  .why {
+    padding: 80px 15px 120px;
+  }
+
+  .why__list {
+    grid-template-columns: repeat(2,1fr);
+    transform: translateY(-40px);
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 576px) {
+  .why {
+    padding: 60px 15px 100px;
+  }
+
+  /* nền thấp lại cho mobile */
+  .why::before,
+  .why::after {
+    height: 40%;
+  }
+
+  .why__header h2 {
+    font-size: 26px;
+  }
+
+  .why__header p {
+    font-size: 15px;
+  }
+
+  .why__list {
+    grid-template-columns: 1fr;
+    transform: translateY(-30px);
+    margin-top: 50px;
+  }
+
+  .why__card {
+    padding: 30px 20px;
+  }
+
+  .why__icon {
+    font-size: 40px;
+  }
+}
+
+
+/*end LÝ DO NÊN CHỌN ĐẠI VIỆT*/
+
+/*CAU HỎI THƯỜNG GẶP*/
+.featured-boxes-area{
+    position: relative;
+    top: -100px;
+}
+
+/*câu hỏi thường gặp*/
+
+.question{
+    padding: 0 0 60px 0;
+}
+.question .container{
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
+
+/* LEFT */
+.question-left{
+    flex:1;
+}
+
+.question .sub{
+        font-size: 15px;
+    color: #000;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.question-left h2{
+      font-size: 23px;
+    margin: 4px 0 25px;
+    line-height: 1.4;
+    color: #c00;
+}
+
+.question-left h2 span{
+    color:#2f6fed;
+}
+
+/* ACCORDION */
+.question .accordion{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.question .acc-item{
+    background:#fff;
+    border-radius:6px;
+    overflow:hidden;
+    border:1px solid #eee;
+}
+
+.question .acc-title{
+  padding: 15px;
+    cursor: pointer;
+    font-weight: 700;
+    background: #eee;
+    font-size: 17px;
+    color: #c00;
+}
+
+.question .acc-content{
+    max-height:0;
+    overflow:hidden;
+    transition:0.3s;
+    padding:0 15px;
+}
+
+.acc-item.active .acc-content{
+     max-height: 200px;
+    padding: 15px;
+    background: #f9f9f9;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* RIGHT */
+.question-right{
+    flex:1;
+    position:relative;
+}
+
+.img{
+    border-radius:10px;
+    position:absolute;
+}
+
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+    .question-left h2{
+        font-size:20px;
+    }
+}
+
+@media(max-width:768px){
+
+    .question .container{
+        flex-direction:column;
+    }
+
+    .question-right{
+        width:100%;
+        height:400px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .featured-boxes-area {
+        padding: 40px 10px 0px !important;
+    }
+}
+
+
+/* KHUNG ẢNH */
+.question-right {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+/* ẢNH */
+.question-right img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+
+    border-radius: 16px;
+
+    /* bóng nhẹ */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+    transition: 0.4s ease;
+}
+
+/* HOVER ZOOM NHẸ */
+.question-right:hover img {
+    transform: scale(1.05);
+}
+
+/* VIỀN ÁNH SÁNG NHẸ */
+.question-right::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2);
+    pointer-events: none;
+}

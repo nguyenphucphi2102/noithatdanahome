@@ -1,0 +1,114 @@
+/*slide*/
+.breadcrumb-wrapper {
+    position: absolute;
+    bottom: -125px;
+    text-align: left;
+    width: 260px;
+    
+}
+
+.ttm-page-title-row {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 85px;
+}
+
+.title-heade{
+        font-size:28px !important;
+    }
+
+@media (max-width: 790px) {
+    .ttm-page-title-row-inner {
+        margin-top: -21px !important;
+        height: 150px !important;
+    }
+    
+    .title-heade{
+        font-size:18px !important;
+        padding-top:10px;
+    }
+}
+
+/*tin tức*/    
+
+    
+    .section-title{
+        font-size:28px;
+        color: #c00;
+    }
+    .grid-section{
+        padding: 40px 0;
+    }
+    .featured-imagebox{
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 10px 5px;
+    transition: all 0.3s ease;
+    position: relative;     
+    overflow: hidden;       
+    }
+
+    /* hover */
+    .featured-imagebox:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .featured-imagebox:hover::before{
+    top: 100%;
+    left: 100%;
+    }
+    .img-fluid{
+        border-radius: 10px;
+    }
+    .featured-content{
+        padding: 10px 0;
+    }
+    .featured-title h3{
+        font-size: 18px !important;
+        text-align: left;
+        line-height: 30px !important;
+        margin: 10px 0;
+        height: 55px !important;
+        color:#c00 !important;
+        font-weight:600 !important;
+    }
+    .featured-title p{
+        line-height: 28px; 
+        overflow: hidden;  
+        height: 80px;
+        font-size: 16px;
+        text-align: justify;
+    }
+    
+    
+/* Responsive */
+@media (max-width: 900px) {
+    .auto-container{
+        max-width:100% !important;
+    }
+    .grid-section .ttm-box-col-wrapper{
+        padding-bottom: 30px;
+    }
+    .grid-section{
+        padding: 30px 0;
+    }
+    .featured-title h3{
+        font-size: 18px !important;
+    }
+    .featured-title p{
+        font-size: 16px;
+    }
+    .services-section-two .inner-container{
+        padding-left:0 !important;
+    }
+    
+    .ttm-row.grid-section {
+        padding: 25px 0 !important;
+    }
+    
+    
+}

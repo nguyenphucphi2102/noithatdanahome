@@ -1,0 +1,357 @@
+/*slide*/
+.breadcrumb-wrapper {
+    position: absolute;
+    bottom: -125px;
+    text-align: left;
+    width: 260px;
+    
+}
+
+.ttm-page-title-row {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 85px;
+}
+
+.title-heade{
+        font-size:28px !important;
+    }
+
+@media (max-width: 790px) {
+    .ttm-page-title-row-inner {
+        margin-top: -21px !important;
+        height: 150px !important;
+    }
+    
+    .title-heade{
+        font-size:18px !important;
+        padding-top:10px;
+    }
+}
+
+/* STYLE CHẠY SỐ*/
+
+.stats-section {
+  padding: 60px 0px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.stat-card {
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 12px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgb(215 211 211);
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card .icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  border: 2px solid #c00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c00;
+  font-size: 22px;
+}
+
+.stat-card .number {
+  font-size: 28px;
+  color: #c00;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.stat-card p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Responsive chỉnh riêng mobile */
+@media (max-width: 768px) {
+  .stats-section {
+    padding: 40px 15px;
+  }
+
+  .stat-card {
+    padding: 25px 15px;
+  }
+
+  .stat-card h3 {
+    font-size: 24px;
+  }
+
+  .stat-card p {
+    font-size: 14px;
+  }
+}
+
+/*style lịch sử hình thành*/
+
+    .history-section {
+        padding: 80px 0;
+        background: url(../hinhmenu/bg-lichsuhinhthanh.jpg) center / cover no-repeat;
+        color: #fff;
+    }
+
+    .history-title {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+
+    .history-item img {
+        width: 100%;
+        border-radius: 6px;
+    }
+
+    .history-text {
+        margin-top: 20px;
+        position: relative;
+        padding-left: 20px;
+    }
+
+    .history-text:before {
+        content: "";
+        width: 3px;
+        height: 100%;
+        background: #c00;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .year {
+        font-size: 34px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .desc {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #ddd;
+    }
+
+    /* slider button */
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #fff;
+    }
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+        color: #c00;
+    }
+
+    /* mobile */
+
+    @media(max-width:768px) {
+
+        .history-title {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .year {
+            font-size: 26px;
+        }
+
+        .desc {
+            font-size: 16px;
+        }
+    }
+    
+    
+    /*-- CSS hiệu ứng up-down*/
+    .animate-updown {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 1s ease-in-out;
+    }
+
+    .animate-updown.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Hiệu ứng zoom ảnh */
+    .ttm_single_image-wrapper {
+        overflow: hidden;
+
+        transition: transform 0.4s ease;
+    }
+
+    .ttm_single_image-wrapper img {
+        transition: transform 0.6s ease, filter 0.4s ease;
+        display: block;
+        height: auto;
+        text-align: center;
+        margin: auto;
+    }
+
+    .ttm_single_image-wrapper:hover img {
+        transform: scale(1.1);
+        filter: brightness(1.1) contrast(1.05);
+        cursor: pointer;
+    }
+
+    .ttm_single_image-wrapper:hover {
+        transform: translateY(-5px);
+    }
+
+    /* mobile */
+
+    @media(max-width:768px) {
+
+        .history-title {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .year {
+            font-size: 26px;
+        }
+
+        .desc {
+            font-size: 16px;
+        }
+    }
+    
+    
+    /*-- CSS hiệu ứng up-down*/
+    .animate-updown {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 1s ease-in-out;
+    }
+
+    .animate-updown.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Hiệu ứng zoom ảnh */
+    .ttm_single_image-wrapper {
+        overflow: hidden;
+
+        transition: transform 0.4s ease;
+    }
+
+    .ttm_single_image-wrapper img {
+        transition: transform 0.6s ease, filter 0.4s ease;
+        display: block;
+        height: auto;
+        text-align: center;
+        margin: auto;
+    }
+
+    .ttm_single_image-wrapper:hover img {
+        transform: scale(1.1);
+        filter: brightness(1.1) contrast(1.05);
+        cursor: pointer;
+    }
+
+    .ttm_single_image-wrapper:hover {
+        transform: translateY(-5px);
+    }
+
+    /*CSS CƠ SỞ */
+    
+    .factory-section {
+        background: #f3f5f7;
+    }
+    
+    .factory-tieude{
+        font-size: 30px;
+        color: #c00;
+        font-weight: bold;
+        padding-bottom: 30px;
+    }
+
+    .factory-box {
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: 0.4s;
+        height: 100%;
+    }
+
+    .factory-box:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .factory-img {
+        overflow: hidden;
+    }
+
+    .factory-img img {
+        width: 100%;
+        object-fit: cover;
+        transition: 0.6s;
+    }
+
+    .factory-box:hover img {
+        transform: scale(1.08);
+    }
+
+    .factory-content {
+        padding: 25px;
+    }
+
+    .factory-title {
+        color: #e60023;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .factory-info i {
+        color: #e60023;
+        width: 22px;
+        margin-right: 8px;
+        font-size: 15px;
+    }
+
+    .factory-info {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        line-height: 1.8;
+        color: #555;
+        font-size: 15px;
+    }
+
+    .factory-info li {
+        margin-bottom: 8px;
+        font-size:17px;
+    }
+
+    /* MOBILE */
+    @media(max-width:768px) {
+
+
+        .factory-content {
+            padding: 18px;
+        }
+
+    }

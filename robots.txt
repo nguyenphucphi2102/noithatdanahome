@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /quanlyweb/
+Disallow: /ckeditor/
+Disallow: */ckfinder/*
+Disallow: /feed/
+Disallow: /_notes/
+Sitemap: https://dienlanhcongnghieptantai.com.vn/sitemap.xml

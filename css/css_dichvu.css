@@ -1,0 +1,534 @@
+
+/* ẢNH BANNER */
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* SECTION HEADER */
+.heading-section {
+    margin-top: 10px;
+    /* background: #f9fafb; */
+    /* border-left: 4px solid #01bf25; */
+    margin-bottom: 20px;
+}
+
+/* CONTAINER */
+.heading-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 15px;
+    text-align: center;
+}
+
+/* H1 */
+.heading-title {
+    color: #01bf25;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom:0px;
+    line-height: 1.4;
+}
+
+/* BREADCRUMB */
+.breadcrumb {
+    font-size: 14px;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #000;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: #01bf25;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .heading-title {
+        font-size: 20px;
+    }
+
+    .heading-inner {
+        padding: 15px 10px;
+    }
+}
+
+
+
+/* ===== GRID CHÍNH ===== */
+/* ===== GRID ===== */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+/* ===== CARD ===== */
+.product-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    display: flex;
+}
+
+.product-item figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.product-item h2 {
+ font-size: 17px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 10px 25px 5px;
+    text-align: center;
+    color: #222;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 38px;
+}
+
+.product-item h2 a {
+    color: #222;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.product-item h2:hover {
+    color: #c00; /* màu nổi */
+}
+
+
+
+/* IMAGE */
+.product-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* CONTENT */
+.product-item figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    flex: 1;
+}
+
+/* TITLE */
+.product-item strong {
+    font-size: 15px;
+    line-height: 1.4;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* PRICE */
+.product-item .price {
+    font-size: 13px;
+    color: red;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* HOVER */
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.product-item img {
+    transition: 0.4s;
+}
+
+.product-item:hover img {
+    transform: scale(1.05);
+}
+
+/* ===== PAGINATION ===== */
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.pagination ul {
+    display: flex;
+    gap: 6px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination a,
+.pagination span {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.pagination .active {
+    background: red;
+    color: #fff;
+    border-color: red;
+}
+
+.pagination a:hover {
+    background: #f5f5f5;
+}
+
+.pagination .dots {
+    border: none;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 576px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .product-item img {
+        height: 140px;
+    }
+
+    .product-item strong {
+        font-size: 13px;
+    }
+
+    .product-item .price {
+        font-size: 12px;
+    }
+}
+
+/* MOBILE NHỎ */
+@media (max-width: 400px) {
+    .product-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*LÝ DO NÊN CHỌN ĐẠI VIỆT*/
+
+/* ===== SECTION ===== */
+.why {
+  position: relative;
+  padding: 50px 20px 40px;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* ===== NỀN CHỈ 50% TRÊN ===== */
+.why::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 50%;
+  background: url('../hinhmenu/gioithieu-congty.jpg') center/cover no-repeat;
+  z-index: 1;
+}
+
+/* overlay tối */
+.why::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 50%;
+  background: rgba(0,0,0,0.55);
+  z-index: 2;
+}
+
+/* ===== HEADER ===== */
+.why__header {
+  position: relative;
+  z-index: 3;
+  max-width: 750px;
+  margin: auto;
+}
+
+.why__header h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  font-family: roboto;
+  line-height:1.5;
+  color:#fff;
+}
+
+.why__header p {
+  font-size: 17px;
+  opacity: 0.9;
+}
+
+/* ===== LIST (CARD BOX) ===== */
+.why__list {
+  position: relative;
+  z-index: 4;
+
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+
+  /* 👉 CARD ĐÈ LÊN NỀN */
+  transform: translateY(-60px);
+}
+
+/* ===== CARD ===== */
+.why__card {
+  padding: 50px 25px;
+  color: #333;
+  border-right: 1px solid #eee;
+
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.why__list li:last-child .why__card {
+  border-right: none;
+}
+
+/* delay animation */
+.why__list li:nth-child(2) .why__card { animation-delay: .2s; }
+.why__list li:nth-child(3) .why__card { animation-delay: .4s; }
+.why__list li:nth-child(4) .why__card { animation-delay: .6s; }
+
+/* ===== ICON ===== */
+.why__icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 18px;
+}
+
+/* ===== TITLE ===== */
+.why__card h3 {
+  color: #d60000;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* ===== TEXT ===== */
+.why__card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===== HOVER ===== */
+.why__card:hover {
+  transform: translateY(-8px) scale(1.05);
+  transition: 0.3s ease;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+  .why {
+    padding: 80px 15px 120px;
+  }
+
+  .why__list {
+    grid-template-columns: repeat(2,1fr);
+    transform: translateY(-40px);
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 576px) {
+  .why {
+    padding: 60px 15px 100px;
+  }
+
+  /* nền thấp lại cho mobile */
+  .why::before,
+  .why::after {
+    height: 40%;
+  }
+
+  .why__header h2 {
+    font-size: 26px;
+  }
+
+  .why__header p {
+    font-size: 15px;
+  }
+
+  .why__list {
+    grid-template-columns: 1fr;
+    transform: translateY(-30px);
+    margin-top: 50px;
+  }
+
+  .why__card {
+    padding: 30px 20px;
+  }
+
+  .why__icon {
+    font-size: 40px;
+  }
+}
+
+
+/*end LÝ DO NÊN CHỌN ĐẠI VIỆT*/
+
+/*CAU HỎI THƯỜNG GẶP*/
+.featured-boxes-area{
+    position: relative;
+    top: -100px;
+}
+
+/*câu hỏi thường gặp*/
+
+.question{
+    padding: 0 0 60px 0;
+}
+.question .container{
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
+
+/* LEFT */
+.question-left{
+    flex:1;
+}
+
+.question .sub{
+        font-size: 15px;
+    color: #000;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.question-left h2{
+      font-size: 23px;
+    margin: 4px 0 25px;
+    line-height: 1.4;
+    color: #c00;
+}
+
+.question-left h2 span{
+    color:#2f6fed;
+}
+
+/* ACCORDION */
+.question .accordion{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.question .acc-item{
+    background:#fff;
+    border-radius:6px;
+    overflow:hidden;
+    border:1px solid #eee;
+}
+
+.question .acc-title{
+  padding: 15px;
+    cursor: pointer;
+    font-weight: 700;
+    background: #eee;
+    font-size: 17px;
+    color: #c00;
+}
+
+.question .acc-content{
+    max-height:0;
+    overflow:hidden;
+    transition:0.3s;
+    padding:0 15px;
+}
+
+.acc-item.active .acc-content{
+     max-height: 200px;
+    padding: 15px;
+    background: #f9f9f9;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* RIGHT */
+.question-right{
+    flex:1;
+    position:relative;
+}
+
+.img{
+    border-radius:10px;
+    position:absolute;
+}
+
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+    .question-left h2{
+        font-size:20px;
+    }
+}
+
+@media(max-width:768px){
+
+    .question .container{
+        flex-direction:column;
+    }
+
+    .question-right{
+        width:100%;
+        height:400px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .featured-boxes-area {
+        padding: 40px 10px 0px !important;
+    }
+}
+
+
