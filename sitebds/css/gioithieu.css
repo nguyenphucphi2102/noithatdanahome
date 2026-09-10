@@ -243,6 +243,37 @@ img {
 }
 
 /*----------------------------------------*/
+/*  Scroll Reveal animation for intro page
+/*----------------------------------------*/
+.reveal,
+.reveal-fade,
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+}
+
+.reveal-fade,
+.reveal {
+  transform: translateY(30px);
+}
+
+.reveal-left {
+  transform: translateX(-40px);
+}
+
+.reveal-right {
+  transform: translateX(40px);
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  filter: none;
+}
+
+/*----------------------------------------*/
 /*  02. Section Title (dùng cho tiêu đề "Tầm Nhìn & Sứ Mệnh")
 /*----------------------------------------*/
 .section-title h2 {
@@ -463,6 +494,17 @@ img {
   border-color: #cea679;
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.about-back-to-top {
+  background-color: #fff;
+  border-color: #cea679;
+  color: #cea679;
+}
+
+.about-back-to-top:hover {
+  background-color: #cea679;
+  color: #fff;
 }
 
 @media (max-width: 575px) {

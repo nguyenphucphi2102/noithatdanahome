@@ -1,6 +1,6 @@
 .service-container { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
 .service-eyebrow { margin: 0 0 16px; color: #e85d3f; font-size: 11px; font-weight: 800; letter-spacing: .18em; }
-.service-intro { position: relative; overflow: hidden; color: #fff; background: #17363a; }
+.service-intro { position: relative; overflow: hidden; color: #fff; background-image: linear-gradient(90deg, rgba(6, 32, 35, 0.86), rgba(14, 42, 46, 0.52)), url('../../hinhmenu/banner-main-1.png'); background-size: cover; background-position: center; background-repeat: no-repeat; }
 .service-intro__pattern { position: absolute; inset: 0; opacity: .12; background-image: linear-gradient(135deg, transparent 0 48%, #d7e1d3 49% 50%, transparent 51%), linear-gradient(45deg, transparent 0 48%, #d7e1d3 49% 50%, transparent 51%); background-size: 72px 72px; }
 .service-intro__inner { position: relative; display: flex; align-items: center; justify-content: space-between; min-height: 390px; padding: 64px 0; }
 .service-intro .service-eyebrow { color: #f3ae8e; }
@@ -20,9 +20,57 @@
 .service-highlights span { display: grid; gap: 4px; }.service-highlights b { font-size: 14px; }.service-highlights small { color: #66777a; font-size: 11px; line-height: 1.5; }
 .service-process h2, .service-cta h2 { margin: 0; color: #17252b; font-size: clamp(27px, 3vw, 42px); line-height: 1.2; }
 .service-list .tintuc-grid { max-width: none; }
-.service-process { padding: 84px 0; color: #fff; background: #17363a; }
-.service-process__heading { margin-bottom: 42px; }.service-process h2 { color: #fff; }.service-process .service-eyebrow { color: #f3ae8e; }
-.service-process__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,.22); }
-.service-process article { min-height: 210px; padding: 28px; background: #17363a; }.service-process article span { color: #f2a786; font-size: 13px; font-weight: 800; letter-spacing: .12em; }.service-process h3 { margin: 35px 0 9px; font-size: 22px; }.service-process p { max-width: 260px; margin: 0; color: #c7d6d0; font-size: 13px; line-height: 1.8; }
+.service-process {
+  position: relative;
+  padding: 84px 0;
+  color: #fff;
+  background-image: linear-gradient(180deg, rgba(10, 27, 30, 0.86), rgba(10, 27, 30, 0.82)), url('../../hinhmenu/banner-main-4.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.service-process__heading {
+  margin-bottom: 42px;
+  position: relative;
+  z-index: 1;
+}
+.service-process h2 { color: #fff; }
+.service-process .service-eyebrow { color: #f3ae8e; }
+.service-process__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.service-process article {
+  min-height: 240px;
+  padding: 30px 28px 26px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.16);
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+.service-process article:hover {
+  transform: translateY(-6px);
+  border-color: rgba(243, 174, 142, 0.7);
+  background: rgba(255, 255, 255, 0.09);
+}
+.service-process article span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  color: #0f1f22;
+  background: linear-gradient(135deg, #f7c8a5, #f0a37d);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+.service-process h3 { margin: 28px 0 12px; font-size: 22px; color: #fff; }
+.service-process p { max-width: 260px; margin: 0; color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.8; }
 .service-cta { padding: 72px 0; background: #fff0ea; }.service-cta__inner { display: flex; align-items: center; justify-content: space-between; gap: 35px; }.service-cta h2 { color: #17252b; }.service-cta .service-eyebrow { margin-bottom: 15px; }
 @media (max-width: 700px) { .service-container { width: calc(100% - 28px); }.service-intro__inner { min-height: auto; padding: 58px 0; }.service-intro h1 { font-size: 39px; }.service-intro__number { display: none; }.service-highlights__grid, .service-process__grid { grid-template-columns: 1fr; }.service-highlights__grid > div, .service-highlights__grid > div:first-child { min-height: auto; padding: 16px 0; border-right: 0; border-bottom: 1px solid #dce4df; }.service-highlights__grid > div:last-child { border-bottom: 0; }.service-cta__inner { display: block; }.service-process { padding: 58px 0; }.service-process article { min-height: auto; padding: 24px 20px; }.service-process h3 { margin-top: 20px; }.service-cta { padding: 58px 0; }.service-cta .service-primary-btn { margin-top: 25px; } }

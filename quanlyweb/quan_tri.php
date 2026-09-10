@@ -25,7 +25,7 @@ include("ham/ham.php");
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content="Ekka - Admin Dashboard eCommerce HTML Template.">
 
-	<title>ATV MEDIA</title>
+	<title>DANAHOME</title>
 	<link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
 	<!-- GOOGLE FONTS -->
 	<link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -43,6 +43,7 @@ include("ham/ham.php");
 
 	<!-- Ekka CSS -->
 	<link id="ekka-css" href="assets/css/ekka.css" rel="stylesheet" />
+	<link href="admindb.css" rel="stylesheet" />
 	<style>
 		.banner-container {
 			display: flex;
@@ -154,7 +155,7 @@ include("ham/ham.php");
 		}
 	</style>
 	<!-- FAVICON -->
-	<link href="hinh/logo.png" rel="shortcut icon" />
+	<link href="../hinhmenu/logodanahome.png" rel="shortcut icon" />
 
 </head>
 <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
@@ -195,8 +196,8 @@ if ($xacdinh_dangnhap != "co") {
 
 					<div class="ec-brand">
 						<a href="" title="Ekka">
-							<img class="ec-brand-icon" src="hinh/logo.png" alt="" />
-							<span class="ec-brand-name text-truncate">ATV</span>
+							<img class="ec-brand-icon" src="../hinhmenu/logodanahome.png" alt="DanaHome" />
+							<span class="ec-brand-name text-truncate">DANAHOME</span>
 						</a>
 					</div>
 
@@ -252,14 +253,14 @@ if ($xacdinh_dangnhap != "co") {
 								<li class="dropdown user-menu">
 									<button class="dropdown-toggle nav-link ec-drop" data-bs-toggle="dropdown"
 										aria-expanded="false">
-										<img src="hinh/logo.png" class="user-image" alt="User Image" />
+										<img src="../hinhmenu/logodanahome.png" class="user-image" alt="User Image" />
 									</button>
 									<ul class="dropdown-menu dropdown-menu-right ec-dropdown-menu">
 										<!-- User image -->
 										<li class="dropdown-header">
-											<img src="hinh/logo.png" class="img-circle" alt="User Image" />
+											<img src="../hinhmenu/logodanahome.png" class="img-circle" alt="User Image" />
 											<div class="d-inline-block">
-												ATV MEDIA
+												DANAHOME
 											</div>
 										</li>
 										<li class="dropdown-footer">

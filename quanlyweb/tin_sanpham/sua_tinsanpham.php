@@ -1,3 +1,7 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+?>
 <div class="ec-page-wrapper">
   <div class="ec-content-wrapper">
     <div class="content">
@@ -5,7 +9,7 @@
         <div>
           <h1>QUẢN LÝ DỊCH VỤ</h1>
           <p class="breadcrumbs"><span><a href="">Quản lý</a></span>
-            <span><i class="mdi mdi-chevron-right"></i></span>Sửa tin tức
+            <span><i class="mdi mdi-chevron-right"></i></span>Sửa dịch vụ
           </p>
         </div>
         <div>
@@ -16,30 +20,23 @@
       <div class="row">
         <?php
         if (isset($_POST['luu'])) {
-          $today2 = date("D");
-          $today = date("d");
+          $today  = date("d");
           $today1 = date("m");
           $today3 = date("Y");
-          $ngay = " $today/$today1/$today3 ";
+          $ngay   = " $today/$today1/$today3 ";
           include_once('db.php');
-          $id = $_REQUEST["id"];
-          $thuocloai = $_REQUEST["thuocloai"];
+
+          $id        = $_REQUEST["id"];
           $tentaptin = $_FILES['txt_hinhanh']['name'];
-          $fileup = '';
-          if ($tentaptin != "") {
-            $fileup = "`hinhanh` = '$tentaptin',";
-          } else {
-            $fileup = "";
-          }
-          $noidung = mysqli_real_escape_string($link, $_POST['txt_noidung']);
-          $tieude = mysqli_real_escape_string($link, $_POST['tieude']);
-          $mota = mysqli_real_escape_string($link, $_POST['mota']);
-          $tieude_en = str_replace("'", "", $_POST['tieude_en']);
-          $tieude = str_replace("'", "", $_POST['tieude']);
-          $tukhoa = mysqli_real_escape_string($link, $_POST['tukhoa']);
-          $tukhoa2 = mysqli_real_escape_string($link, $_POST['tukhoa2']);
-          $linkurl = strtolower(str_replace(",", "", khongdau(str_replace("'", "", $_POST['tieude']))));
-          $thuocloai = $_POST['thuocloai'];
+          $fileup    = ($tentaptin != "") ? "`hinhanh` = '$tentaptin'," : "";
+
+          $noidung   = mysqli_real_escape_string($link, $_POST['txt_noidung']);
+          $tieude    = mysqli_real_escape_string($link, str_replace("'", "", $_POST['tieude']));
+          $mota      = mysqli_real_escape_string($link, $_POST['mota']);
+          $tieude_en = mysqli_real_escape_string($link, str_replace("'", "", $_POST['tieude_en']));
+          $tukhoa    = mysqli_real_escape_string($link, $_POST['tukhoa']);
+          $thuocloai = mysqli_real_escape_string($link, $_POST['thuocloai']);
+          $linkurl   = strtolower(str_replace(",", "", khongdau(str_replace("'", "", $_POST['tieude']))));
 
           $truyvan = "UPDATE `tin_sanpham` SET $fileup
                     `thuocloai` = '$thuocloai',
@@ -48,42 +45,31 @@
                     `mota` = '$mota',
                     `tieude` = '$tieude',
                     `tukhoa` = '$tukhoa',
-                    `tukhoa2` = '$tukhoa2',
                     `linkurl` = '$linkurl',
                     `ngay` = '$ngay',
                     `tieude_en` = '$tieude_en'
-                     WHERE `id` = $id;";
+                     WHERE `id` = $id";
 
           $result = mysqli_query($link, $truyvan);
-          echo "<script>window.location='quan_tri.php?p=ds_tin_sanpham&page=" . $_GET["page"] . "'</script>";
-          if ($result) {
-            if ($fileup != '') {
-              dichuyen_taptin_vaothumuc($tentaptin);
 
-            }
-            echo "Chúc mừng bạn Upload thành công thông tin";
-          } else {
-            echo "Upload không thành công. Bạn thử lại xem ";
-
-
+          if (!$result) {
+              die('MySQL Error: ' . mysqli_error($link));
           }
+
+          if ($fileup != '') {
+              dichuyen_taptin_vaothumuc($tentaptin);
+          }
+
+          echo "<script>window.location='quan_tri.php?p=ds_tin_sanpham&page=" . $_GET["page"] . "'</script>";
+          exit;
         }
+
         function dichuyen_taptin_vaothumuc($tentaptin)
         {
           $thumuctam_chuataptin = $_FILES['txt_hinhanh']['tmp_name'];
-          if (move_uploaded_file($thumuctam_chuataptin, "../HinhCTSP/Hinhdichvu/$tentaptin")) {
-            echo "Chúc mừng bạn Upload thành công thông tin ";
-
-          } else {
-            xoataptin($tentaptin);
-            echo "Chúc mừng bạn Upload thành công thông tin";
+          if (!move_uploaded_file($thumuctam_chuataptin, "../HinhCTSP/Hinhdichvu/$tentaptin")) {
+              echo "Không thể copy tập tin $tentaptin vào thư mục tài liệu";
           }
-        }
-        function xoataptin($tentaptin)
-        {
-          include_once('db.php');
-          $truyvan = "DELETE FROM maykhoanda WHERE id = $masotaptin";
-          mysqli_query($link, $truyvan);
         }
         ?>
         <?php
@@ -91,22 +77,17 @@
         $id = $_REQUEST["id"];
         $result = mysqli_query($link, "SELECT * FROM tin_sanpham where id like '$id' ");
         $row_dulieu_sua = mysqli_fetch_array($result);
-        $tieude = $row_dulieu_sua['tieude'];
-        $mota = $row_dulieu_sua['mota'];
-        $hinhanh = $row_dulieu_sua['hinhanh'];
+        $tieude    = $row_dulieu_sua['tieude'];
+        $mota      = $row_dulieu_sua['mota'];
+        $hinhanh   = $row_dulieu_sua['hinhanh'];
         $tieude_en = $row_dulieu_sua['tieude_en'];
-        $title = $row_dulieu_sua['title'];
-        $tukhoa = $row_dulieu_sua['tukhoa'];
-        $tukhoa2 = $row_dulieu_sua['tukhoa2'];
-        $ngay = $row_dulieu_sua['ngay'];
-        $linkurl = $row_dulieu_sua['linkurl'];
-        $trangchu = $row_dulieu_sua['trangchu'];
-        $noidung = $row_dulieu_sua['noidung'];
+        $tukhoa    = $row_dulieu_sua['tukhoa'];
+        $noidung   = $row_dulieu_sua['noidung'];
         ?>
         <div class="col-12">
           <div class="card card-default">
             <div class="card-header card-header-border-bottom">
-              <h2>Sửa tin tức</h2>
+              <h2>Sửa dịch vụ</h2>
             </div>
             <div class="card-body">
               <form class="row g-3" action="" method="POST" enctype="multipart/form-data">
@@ -150,62 +131,50 @@
                         <div class="col-md-5">
                           <label class="form-label fw-bold">Chọn loại</label>
                           <?php
-                          $id = $_REQUEST["id"];
                           $sq = mysqli_query($link, "SELECT * FROM tin_sanpham where id=" . $id . "");
                           $loai = mysqli_fetch_array($sq);
                           ?>
                           <select name="thuocloai" class="form-control">
                             <?php
-                            $selected = "";
                             $sql = mysqli_query($link, "SELECT * FROM loai_tin_sanpham ORDER BY id DESC");
                             while ($row = mysqli_fetch_array($sql)) {
-                              if ($row['id'] == $loai['thuocloai']) {
-                                $selected = "selected='selected'";
-                              } else {
-                                $selected = '';
-                              }
+                              $selected = ($row['id'] == $loai['thuocloai']) ? "selected='selected'" : '';
                               ?>
                               <option value="<?= $row['id'] ?>" <?php echo $selected; ?>><?php echo $row['thuocloai'] ?>
                               </option>
                             <?php } ?>
                           </select>
                         </div>
-                        <!-- Tiêu đề tin tức -->
+
                         <div class="col-md-7">
-                          <label for="inputEmail4" class="form-label fw-bold">Tiêu đề tin tức</label>
+                          <label for="inputEmail4" class="form-label fw-bold">Tiêu đề dịch vụ</label>
                           <input name="tieude" type="text" id="tieude" class="form-control"
                             value="<?php echo "$tieude"; ?>" maxlength="70" />
                         </div>
 
-                        <!-- Mô tả ngắn -->
                         <div class="col-md-12 mt-3">
                           <label class="form-label fw-bold">Mô tả ngắn ( 160 - 300 ký tự)</label>
-                          <textarea name="mota" class="form-control" maxlength="300"
-                            required><?php echo $mota; ?></textarea>
+                          <textarea name="mota" class="form-control" maxlength="300"><?php echo $mota; ?></textarea>
                         </div>
 
-                        <!-- Từ khoá 1 -->
                         <div class="col-md-12 mt-3">
-                          <label for="tukhoa" class="form-label fw-bold">Từ khoá 1</label>
+                          <label for="tukhoa" class="form-label fw-bold">Từ khoá H1</label>
                           <input name="tukhoa" type="text" id="tukhoa" value="<?php echo "$tukhoa"; ?>"
                             class="form-control" maxlength="160" />
                         </div>
 
-                        <!-- Từ khoá 2 -->
                         <div class="col-md-12 mt-3">
-                          <label for="tieude_en" class="form-label fw-bold">Từ khoá 2</label>
+                          <label for="tieude_en" class="form-label fw-bold">Từ khoá H2</label>
                           <input name="tieude_en" type="text" id="tieude_en" class="form-control"
                             value="<?php echo "$tieude_en"; ?>" maxlength="160" />
                         </div>
 
-                        <!-- Nội dung chi tiết -->
                         <div class="col-md-12 mt-3">
                           <label class="form-label fw-bold">Nội dung chi tiết</label>
                           <textarea name="txt_noidung" id="txt_noidung" rows="10"
                             cols="50"><?php echo htmlspecialchars($noidung); ?></textarea>
                         </div>
 
-                        <!-- Nút lưu -->
                         <div class="col-md-12 text-center mt-3">
                           <input name="luu" class="btn btn-success" type="submit" id="luu" value="Lưu Lại" />
                         </div>
@@ -221,7 +190,6 @@
     </div>
   </div>
 </div>
-
 
 <script type="text/javascript">
   var editor = CKEDITOR.replace('txt_noidung', {

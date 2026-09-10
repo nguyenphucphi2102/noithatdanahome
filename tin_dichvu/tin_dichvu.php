@@ -45,7 +45,7 @@
             $mota = $row['mota'];
             $linkurl = $row['linkurl'];
 
-            $link = "dich-vu-$linkurl-$id";
+            $link = "dich-vu-noi-that-$linkurl-$id";
         ?>
 
         <li class="tintuc-item">

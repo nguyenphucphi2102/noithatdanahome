@@ -279,7 +279,7 @@ $ten  = $tv_2['thuocloai'];
                 $link_hinh    = !empty($hinhanh_name) ? "HinhCTSP/Hinhdichvu/" . $hinhanh_name : "https://via.placeholder.com/400x250?text=No+Image";
                 
                 $url          = htmlspecialchars($row->linkurl, ENT_QUOTES, 'UTF-8');
-                $link_baiviet = strtolower("tin-san-pham-$url-$product_id");
+                $link_baiviet = strtolower("mau-thiet-ke-$url-$product_id");
             ?>
                 
                 <div class="col-lg-4 col-md-6 col-12">

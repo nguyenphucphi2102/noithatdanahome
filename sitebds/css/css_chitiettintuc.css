@@ -211,7 +211,7 @@ TIN TỨC CÔNG TY
 ============================== */
 .article-breadcrumb {
   font-size: 14px;
-  color: #1f5c2e;
+  color: #222222;
   margin-bottom: 10px;
   line-height: 1.5;
 }
@@ -232,7 +232,7 @@ TIN TỨC CÔNG TY
   font-size: 30px;
   line-height: 1.4;
   font-weight: 700;
-  color: #1f5c2e;
+  color: #222222;
   margin-bottom: 10px;
 }
 
@@ -421,7 +421,7 @@ img {
 .article-content h2,
 .phan-noidung h2 {
   font-size: 19px;
-  color: #1f5c2e;
+  color: #222222;
   margin: 12px 0;
 }
 
@@ -719,7 +719,7 @@ TIN LIÊN QUAN
   display: block;
   font-size: 19px;
   font-weight: 600;
-  color: #1f5c2e;
+  color: #222222;
   text-decoration: none;
   line-height: 1.4;
   margin-bottom: 6px;
@@ -1074,7 +1074,7 @@ TIN LIÊN QUAN
 }
 
 .criteria-desc {
-  font-size: 14px;
+  font-size: 16px;
   color: #666666;
   line-height: 1.6;
   margin-bottom: 25px;
@@ -1133,7 +1133,7 @@ TIN LIÊN QUAN
 }
 
 .criteria-list li {
-  font-size: 13px;
+  font-size: 15px;
   color: #444444;
   margin-bottom: 8px;
   display: flex;
@@ -1146,7 +1146,7 @@ TIN LIÊN QUAN
 }
 
 .criteria-list li i {
-  color: #1f5c2e;
+  color: #222222;
   font-size: 11px;
 }
 

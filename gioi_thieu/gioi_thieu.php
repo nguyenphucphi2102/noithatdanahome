@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="sitebds/css/gioithieu.css">
 <div class="page-banner-section section bg-image"
-    style="background-image: url('hinhmenu/banner-main-4.avif'); padding: 90px 0; position: relative;">
+    style="background-image: url('hinhmenu/banner-main-4.png'); padding: 90px 0; position: relative;">
     <div
         style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.65); z-index: 1;">
     </div>
@@ -23,11 +23,11 @@
 <div id="ve-danahome" class="section py-5 bg-white">
     <div class="container py-4">
         <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <img src="hinhmenu/banner-main-1.avif" alt="Câu chuyện DanaHome"
+            <div class="col-lg-6 mb-4 mb-lg-0 reveal reveal-left">
+                <img src="hinhmenu/banner-main-1.png" alt="Câu chuyện DanaHome"
                     class="img-fluid rounded shadow-sm">
             </div>
-            <div class="col-lg-6 pl-lg-5">
+            <div class="col-lg-6 pl-lg-5 reveal reveal-right">
                 <span
                     style="color: #cea679; font-weight: 700; letter-spacing: 1px; display: block; margin-bottom: 10px; text-transform: uppercase;">Câu
                     chuyện thương hiệu</span>
@@ -80,7 +80,7 @@
 
         <div class="row mt-2">
             <!-- Tầm nhìn -->
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 mb-4 reveal reveal-fade">
                 <div class="about-vision-card">
                     <div class="card-icon"><i class="fa fa-lightbulb-o"></i></div>
                     <h3>Tầm Nhìn</h3>
@@ -90,7 +90,7 @@
                 </div>
             </div>
             <!-- Sứ mệnh -->
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 mb-4 reveal reveal-fade">
                 <div class="about-vision-card">
                     <div class="card-icon"><i class="fa fa-rocket"></i></div>
                     <h3>Sứ Mệnh</h3>
@@ -99,7 +99,7 @@
                 </div>
             </div>
             <!-- Giá trị cốt lõi -->
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 mb-4 reveal reveal-fade">
                 <div class="about-vision-card">
                     <div class="card-icon"><i class="fa fa-star"></i></div>
                     <h3>Giá Trị Cốt Lõi</h3>
@@ -112,17 +112,15 @@
     </div>
 </div>
 
-
-
 <!-- ================= 05. SECTION: XƯỞNG SẢN XUẤT ================= -->
 <div id="xuong-san-xuat" class="section py-5 bg-white">
     <div class="container py-4">
         <div class="row align-items-center">
-            <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
-                <img src="hinhmenu/banner-main-4.avif" alt="Xưởng nội thất DanaHome"
+            <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0 reveal reveal-right">
+                <img src="hinhmenu/banner-main-4.png" alt="Xưởng nội thất DanaHome"
                     class="img-fluid rounded shadow-sm">
             </div>
-            <div class="col-lg-6 order-lg-1 pr-lg-5">
+            <div class="col-lg-6 order-lg-1 pr-lg-5 reveal reveal-left">
                 <span
                     style="color: #cea679; font-weight: 700; display: block; margin-bottom: 10px; text-transform: uppercase;">Lợi
                     thế cạnh tranh</span>
@@ -274,5 +272,28 @@
         </div>
     </div>
 </section>
+
+<section class="about-contact-cta" style="padding: 70px 0; background: linear-gradient(135deg, #1d1d1d 0%, #2f2a26 100%);">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center text-lg-start">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <span style="display:inline-block; color:#cea679; font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:12px;">Liên hệ</span>
+                <h2 style="color:#fff; margin:0; font-size: clamp(28px, 4vw, 42px); font-weight:700; line-height:1.2;">Bạn muốn xây dựng không gian sống đẹp và tiện nghi?</h2>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div style="display:flex; flex-direction:column; gap:14px; align-items:center; justify-content:center;">
+                    <a href="tel:0935911222" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; background:#cea679; color:#fff; padding:14px 24px; border-radius:999px; font-weight:700; text-decoration:none; min-width:220px;">
+                        <i class="fa fa-phone"></i> Gọi ngay: 0935 911 222
+                    </a>
+                    <a href="lien-he" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; border:1px solid rgba(255,255,255,0.5); color:#fff; padding:14px 24px; border-radius:999px; font-weight:600; text-decoration:none; min-width:220px;">
+                        <i class="fa fa-envelope"></i> Liên hệ tư vấn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="sitebds/js/trangchu.js"></script>
 
 <div class="ftr__accent-bar" style="clear: both; display: block; width: 100%;"></div>

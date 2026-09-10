@@ -51,7 +51,7 @@ unlink($taptinhinhndabcd);
 
 
 
-$chuoi = "DELETE FROM tin_sanphama WHERE id = '$_GET[id]' ";
+$chuoi = "DELETE FROM tin_sanpham WHERE id = '$_GET[id]' ";
 
 mysqli_query($link, $chuoi);
 

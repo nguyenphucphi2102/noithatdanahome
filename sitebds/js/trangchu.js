@@ -15,20 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
   syncHeroViewportHeight();
   window.addEventListener("resize", syncHeroViewportHeight);
 
-  // ========== Nút cuộn lên đầu trang chủ ==========
-  const backToTop = document.getElementById("backToTop");
-  if (backToTop) {
-    function updateBackToTop() {
-      backToTop.classList.toggle("show", window.scrollY > 250);
-    }
-
-    window.addEventListener("scroll", updateBackToTop, { passive: true });
-    backToTop.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-    updateBackToTop();
-  }
-
   // ========== 2. Tab "Bảng Giá & Dịch Vụ" (Đã cô lập phạm vi) ==========
   const pricingSection = document.querySelector(".pricing-tabs-section");
   if (pricingSection) {
@@ -54,26 +40,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ========== 3. Hiệu ứng cuộn trang (Scroll Reveal) ==========
   const revealElements = document.querySelectorAll(
-    ".reveal-fade, .reveal-right",
+    ".reveal, .reveal-fade, .reveal-right, .reveal-left",
   );
 
-  function checkScrollReveal() {
-    const triggerBottom = window.innerHeight * 0.85;
+  if (revealElements.length) {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-active");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -8% 0px",
+      },
+    );
 
-    revealElements.forEach((el) => {
-      const elTop = el.getBoundingClientRect().top;
-      if (elTop < triggerBottom) {
-        el.classList.add("reveal-active");
-      }
+    revealElements.forEach((el, index) => {
+      const delay = Number(el.dataset.delay || index * 0.04);
+      el.style.transitionDelay = `${delay}s`;
+      revealObserver.observe(el);
     });
   }
-
-  revealElements.forEach((el) => {
-    el.classList.add("reveal-active");
-  });
-
-  window.addEventListener("scroll", checkScrollReveal);
-  checkScrollReveal();
 
   // ========== 4. Tự động phát Video YouTube khi cuộn tới ==========
   const videoFrame = document.getElementById("videoPlayerFrame");
@@ -112,15 +103,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const slides = [
     {
-      src: "hinhmenu/banner-main-1.avif",
+      src: "hinhmenu/banner-main-1.png",
       alt: "Thiết kế nội thất DanaHome",
     },
     {
-      src: "hinhmenu/banner-side-1.avif",
+      src: "hinhmenu/banner-side-1.png",
       alt: "Không gian nội thất cao cấp",
     },
     {
-      src: "hinhmenu/banner-main-4.avif",
+      src: "hinhmenu/banner-main-4.png",
       alt: "Công trình kiến trúc DanaHome",
     },
   ];

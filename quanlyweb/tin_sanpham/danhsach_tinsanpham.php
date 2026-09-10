@@ -13,7 +13,7 @@
 					</p>
 				</div>
 				<div>
-					<a href="quan_tri.php?p=them_tin_tintuc" class="btn btn-primary"> Thêm tin tức</a>
+					<a href="quan_tri.php?p=them_tin_sanpham" class="btn btn-primary"> Thêm tin tức</a>
 				</div>
 			</div>
 			<div class="row">

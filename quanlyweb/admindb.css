@@ -1,14 +1,36 @@
+:root {
+    --admin-bg: #f5f1ea;
+    --admin-surface: #fffdfb;
+    --admin-panel: #1f2328;
+    --admin-panel-2: #2a2f35;
+    --admin-accent: #d7a652;
+    --admin-accent-dark: #b47d2d;
+    --admin-text: #1f2430;
+    --admin-muted: #68707c;
+    --admin-border: rgba(31, 36, 48, 0.09);
+    --admin-white: #ffffff;
+    --admin-shadow: 0 12px 30px rgba(28, 33, 39, 0.08);
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #f6f7fb;
-    color: #888da8;
+    background: linear-gradient(180deg, #f7f4ee 0%, #f1f3f6 100%) !important;
+    color: var(--admin-text) !important;
     letter-spacing: 0.2px;
     font-family: 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
+}
+
+#body {
+    background: linear-gradient(180deg, #f7f4ee 0%, #f1f3f6 100%) !important;
+}
+
+.ec-page-wrapper {
+    background: transparent !important;
 }
 
 a,
@@ -37,11 +59,24 @@ td {
     font-weight: 300;
 }
 
-input {
-    border-color: #d8e0e5;
-    border-radius: 2px !important;
+input,
+.form-control,
+.form-select,
+textarea {
+    border-color: rgba(31, 36, 48, 0.12) !important;
+    border-radius: 10px !important;
     box-shadow: none !important;
     font-weight: 300 !important;
+    background: #fff !important;
+    color: var(--admin-text) !important;
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea:focus,
+input:focus {
+    border-color: rgba(215, 166, 82, 0.8) !important;
+    box-shadow: 0 0 0 3px rgba(215, 166, 82, 0.12) !important;
 }
 
 .form-control:disabled,
@@ -50,16 +85,38 @@ input {
 }
 
 button.btn {
-    border-radius: 2px !important;
+    border-radius: 10px !important;
     box-shadow: none !important;
+    font-weight: 600 !important;
 }
 
 button.btn.btn-primary {
-    background-color: #0e9aee !important;
+    background: linear-gradient(135deg, var(--admin-accent) 0%, var(--admin-accent-dark) 100%) !important;
+    border: none !important;
+    color: var(--admin-white) !important;
+    box-shadow: 0 10px 20px rgba(180, 125, 45, 0.2) !important;
 }
 
 button.btn.btn-primary:hover {
-    background-color: #0879c8 !important;
+    background: linear-gradient(135deg, var(--admin-accent-dark) 0%, var(--admin-accent) 100%) !important;
+}
+
+#left-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    background: linear-gradient(180deg, var(--admin-panel) 0%, var(--admin-panel-2) 100%);
+    overflow-y: auto;
+    height: 100vh;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 60px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    overflow-x: hidden;
+    z-index: 2;
+    box-shadow: 12px 0 24px rgba(31, 35, 40, 0.12);
 }
 
 #left-menu {
@@ -100,7 +157,7 @@ button.btn.btn-primary:hover {
 }
 
 #left-menu ul li a {
-    color: #99abb4;
+    color: rgba(255,255,255,0.74);
     width: 100%;
     display: inline-block;
     width: 260px;
@@ -120,17 +177,17 @@ button.btn.btn-primary:hover {
     transition: all 0.3s ease;
 }
 #left-menu ul li:hover a span{
-    color: #0e9aee;
+    color: var(--admin-accent);
 }
 #left-menu ul li:hover a i{
-    color: #0e9aee;
+    color: var(--admin-accent);
 }
 
 #left-menu ul li a span {
     width: 100%;
     height: 35px;
     padding-left: 10px;
-    color: #99abb4;
+    color: rgba(255,255,255,0.76);
     font-weight: 300;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -138,7 +195,7 @@ button.btn.btn-primary:hover {
 }
 
 #left-menu ul li.active a {
-    border-bottom: 2px solid #0e9aee;
+    border-bottom: 2px solid var(--admin-accent);
 }
 
 #left-menu ul li.active a span {
@@ -146,13 +203,14 @@ button.btn.btn-primary:hover {
 }
 
 #left-menu ul li.active a i {
-    background-color: #0e9aee;
+    background-color: var(--admin-accent);
     color: #fff;
 }
 
 
 #left-menu li.has-sub ul {
-    background-color: #454e62;
+    background: rgba(255,255,255,0.02);
+    border-left: 1px solid rgba(255,255,255,0.06);
     margin: 0 -10px;
     padding-left: 45px;
     height: 0;
@@ -179,13 +237,13 @@ a:hover {
     top: 0;
     z-index: 2;
     left: 0;
-    background-color: #464e62;
-    border-color: #464e62;
+    background: linear-gradient(180deg, var(--admin-panel) 0%, var(--admin-panel-2) 100%);
+    border-color: rgba(255,255,255,0.08);
     height: 60px;
     width: 280px;
     font-size: 30px;
     line-height: 2em;
-    border-right: 1px solid #e6ecf5;
+    border-right: 1px solid rgba(255,255,255,0.08);
     z-index: 4;
     color: #fff;
     padding-left: 15px;
@@ -197,13 +255,14 @@ a:hover {
 
 
 #header {
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.82);
     height: 60px;
-    border-bottom: 1px solid #e6ecf5;
+    border-bottom: 1px solid var(--admin-border);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 3;
+    backdrop-filter: blur(10px);
 }
 
 #header .header-left {
@@ -245,17 +304,54 @@ a:hover {
 }
 
 .card {
-    border: 1px solid #e6ecf5;
+    border: 1px solid var(--admin-border);
     margin-bottom: 1em;
     font-weight: 300;
+    background: var(--admin-surface) !important;
+    border-radius: 16px !important;
+    box-shadow: var(--admin-shadow);
 }
 
 .card .title {
     padding: 15px 20px;
-    border-bottom: 1px solid #e6ecf5;
+    border-bottom: 1px solid var(--admin-border);
     margin-bottom: 10px;
-    color: #000;
+    color: var(--admin-text);
     font-size: 18px;
+    background: linear-gradient(90deg, rgba(215, 166, 82, 0.08), rgba(255, 255, 255, 0));
+    font-weight: 600 !important;
+}
+
+.badge.bg-primary {
+    background: var(--admin-accent) !important;
+}
+
+.btn.btn-primary,
+button.btn.btn-primary {
+    background: linear-gradient(135deg, var(--admin-accent) 0%, var(--admin-accent-dark) 100%) !important;
+    border: none !important;
+    color: var(--admin-white) !important;
+    box-shadow: 0 10px 20px rgba(180, 125, 45, 0.2) !important;
+}
+
+.btn.btn-primary:hover,
+button.btn.btn-primary:hover {
+    background: linear-gradient(135deg, var(--admin-accent-dark) 0%, var(--admin-accent) 100%) !important;
+}
+
+.table thead th,
+.table td,
+.table th {
+    border-color: rgba(31, 36, 48, 0.08) !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(215, 166, 82, 0.55);
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(31, 36, 48, 0.08);
 }
 
 #show-lable {

@@ -64,7 +64,7 @@ if (isset($_POST['luu'])) {
                 <p class="contact-kicker">DANAHOME / CONTACT STUDIO</p>
                 <h1>Kể chúng tôi nghe<br><em>về không gian bạn cần.</em></h1>
                 <p class="contact-hero__lead">Từ một căn phòng trống đến một ngôi nhà có cá tính. Đội ngũ DanaHome sẵn sàng lắng nghe và biến ý tưởng của bạn thành không gian sống đáng tự hào.</p>
-                <a class="contact-hero__phone" href="tel:0914454348"><i class="fa-solid fa-phone"></i><span><small>Gọi để được tư vấn ngay</small>0914 454 348</span></a>
+                <a class="contact-hero__phone" href="tel:0935911222"><i class="fa-solid fa-phone"></i><span><small>Gọi để được tư vấn ngay</small>0935 911 222</span></a>
             </div>
             <div class="contact-hero__stamp" aria-hidden="true"><span>DESIGN<br>&amp; BUILD</span><strong>DH</strong></div>
         </div>
@@ -73,9 +73,35 @@ if (isset($_POST['luu'])) {
     <section class="contact-details">
         <div class="container">
             <div class="contact-details__grid">
-                <a class="contact-detail" href="tel:0914454348"><span class="contact-detail__icon"><i class="fa-solid fa-phone"></i></span><span><b>Hotline tư vấn</b><strong>0914 454 348</strong><small>Thứ 2 - Thứ 7, 08:00 - 17:00</small></span></a>
-                <a class="contact-detail" href="mailto:ngoky023@gmail.com"><span class="contact-detail__icon"><i class="fa-regular fa-envelope"></i></span><span><b>Email</b><strong>ngoky023@gmail.com</strong><small>Phản hồi trong vòng 24 giờ</small></span></a>
-                <div class="contact-detail"><span class="contact-detail__icon"><i class="fa-solid fa-location-dot"></i></span><span><b>Văn phòng</b><strong>Khu phố 1B, P. An Phú</strong><small>TP. Hồ Chí Minh</small></span></div>
+                <a class="contact-detail" href="mailto:danahome222@gmail.com">
+                    <div class="contact-detail__media" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80');">
+                        <div class="contact-detail__icon-wrap"><i class="fa-regular fa-envelope"></i></div>
+                    </div>
+                    <div class="contact-detail__body">
+                        <h3 class="contact-detail__title">Gửi email</h3>
+                        <p class="contact-detail__text contact-detail__text--small">danahome222@gmail.com</p>
+                    </div>
+                </a>
+
+                <a class="contact-detail" href="tel:0935911222">
+                    <div class="contact-detail__media" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80');">
+                        <div class="contact-detail__icon-wrap"><i class="fa-solid fa-phone-volume"></i></div>
+                    </div>
+                    <div class="contact-detail__body">
+                        <h3 class="contact-detail__title">Liên hệ ngay</h3>
+                        <p class="contact-detail__text">0935 911 222</p>
+                    </div>
+                </a>
+
+                <div class="contact-detail">
+                    <div class="contact-detail__media" style="background-image: url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80');">
+                        <div class="contact-detail__icon-wrap"><i class="fa-solid fa-location-dot"></i></div>
+                    </div>
+                    <div class="contact-detail__body">
+                        <h3 class="contact-detail__title">Địa chỉ</h3>
+                        <p class="contact-detail__text contact-detail__text--small">18 Kinh Dương Vương<br>Phường Thanh Khê<br>TP. Đà Nẵng</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -83,31 +109,39 @@ if (isset($_POST['luu'])) {
     <section class="contact-main">
         <div class="container contact-main__grid">
             <div class="contact-about">
-                <p class="contact-kicker">GẶP GỠ DANAHOME</p>
-                <h2>Mỗi không gian đẹp đều bắt đầu từ một cuộc trò chuyện.</h2>
-                <p>Chúng tôi cung cấp giải pháp thiết kế và thi công nội thất trọn gói, từ tư vấn ý tưởng, triển khai bản vẽ đến hoàn thiện tại công trình.</p>
-                <ul class="contact-checklist">
-                    <li><i class="fa-solid fa-check"></i> Tư vấn theo nhu cầu và ngân sách thực tế</li>
-                    <li><i class="fa-solid fa-check"></i> Quy trình rõ ràng, chủ động tiến độ</li>
-                    <li><i class="fa-solid fa-check"></i> Đồng hành sau khi bàn giao</li>
-                </ul>
-                <div class="contact-note"><i class="fa-solid fa-quote-left"></i><span>Đừng ngại bắt đầu bằng một ý tưởng còn dang dở. Chúng tôi sẽ cùng bạn làm rõ nó.</span></div>
+                <span class="contact-badge">GỬI EMAIL</span>
+                <h2>Liên hệ với chúng tôi nếu có thắc mắc</h2>
+                <p>Bạn đang có nhu cầu xây nhà trọn gói hoặc cần tư vấn về thiết kế, thi công nội thất? Hãy liên hệ ngay với chúng tôi để nhận hỗ trợ nhanh chóng và giải pháp phù hợp nhất cho không gian của bạn.</p>
             </div>
 
             <div class="contact-form-panel">
-                <div class="contact-form-panel__head"><p class="contact-kicker">GỬI YÊU CẦU</p><h2>Để lại thông tin</h2><p>Chúng tôi sẽ liên hệ lại để trao đổi kỹ hơn về nhu cầu của bạn.</p></div>
                 <form id="tt_mh" name="tt_mh" method="post" action="" class="contact-form">
-                    <div class="contact-form__row"><label>Họ và tên<input name="txt_hoten" type="text" placeholder="Nguyễn Văn A" required></label><label>Số điện thoại<input name="txt_dt" type="tel" placeholder="0912 345 678" required></label></div>
-                    <div class="contact-form__row"><label>Email<input name="txt_email" type="email" placeholder="email@example.com"></label><label>Địa điểm công trình<input name="txt_diemden" type="text" placeholder="Đà Nẵng, Hội An..." required></label></div>
-                    <label>Địa chỉ<input name="txt_diachi" type="text" placeholder="Địa chỉ cụ thể"></label>
-                    <label>Chủ đề trao đổi<input name="txt_tieude" type="text" placeholder="Thiết kế phòng khách, thi công trọn gói..." required></label>
-                    <label>Nội dung cần tư vấn<textarea name="txt_nd" placeholder="Bạn đang hình dung không gian của mình như thế nào?" required></textarea></label>
+                    <div class="contact-form__row">
+                        <label>Họ tên<span>*</span><input name="txt_hoten" type="text" placeholder="Họ tên" required></label>
+                        <label>Email<span>*</span><input name="txt_email" type="email" placeholder="Email" required></label>
+                    </div>
+                    <div class="contact-form__row">
+                        <label>Số điện thoại<span>*</span><input name="txt_dt" type="tel" placeholder="Số điện thoại" required></label>
+                        <label>Chủ đề<span>*</span><input name="txt_tieude" type="text" placeholder="Chủ đề" required></label>
+                    </div>
+                    <label class="contact-form__full">Nội dung<textarea name="txt_nd" placeholder="Nội dung" required></textarea></label>
                     <input name="txt_fax" type="hidden" value="">
-                    <button name="luu" type="submit"><span>Gửi yêu cầu tư vấn</span><i class="fa-solid fa-arrow-right"></i></button>
+                    <input name="txt_diachi" type="hidden" value="18 Kinh Dương Vương - Phường Thanh Khê - TP Đà Nẵng">
+                    <input name="txt_diemden" type="hidden" value="18 Kinh Dương Vương - Phường Thanh Khê - TP Đà Nẵng">
+                    <button name="luu" type="submit" class="contact-submit-btn"><span>Gửi liên hệ</span></button>
                 </form>
             </div>
         </div>
     </section>
 
-    <section class="contact-map-section"><div class="container contact-map"><div><p class="contact-kicker">ĐỊA CHỈ LÀM VIỆC</p><h2>Ghé DanaHome khi bạn tiện.</h2><p>Chúng tôi luôn chào đón bạn đến trao đổi trực tiếp về công trình và vật liệu.</p><a href="https://maps.google.com/?q=Khu+phố+1B,+Phường+An+Phú,+Hồ+Chí+Minh" target="_blank" rel="noopener">Mở trên Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div><div class="contact-map__visual"><i class="fa-solid fa-location-dot"></i><span>DANAHOME<br><small>TP. HỒ CHÍ MINH</small></span></div></div></section>
-+</main>
+    <section class="contact-map-section">
+        <div class="container contact-map-wrap">
+            <iframe
+                src="https://www.google.com/maps?q=18+Kinh+D%C6%B0%C6%A1ng+V%C6%B0%C6%A1ng,+Ph%C6%B0%E1%BB%9Dng+Thanh+Kh%C3%AA,+%C4%90%C3%A0+N%E1%BA%B5ng&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+</main>

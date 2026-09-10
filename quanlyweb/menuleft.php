@@ -98,28 +98,28 @@
 		<li class="has-sub">
 			<a class="sidenav-item-link" href="javascript:void(0)">
 				<i class="mdi mdi-file-document"></i>
-				<span class="nav-text">Quản Lý Tin Sản Phẩm </span> <b class="caret"></b>
+				<span class="nav-text">Quản Lý Tin Dự án </span> <b class="caret"></b>
 			</a>
 			<div class="collapse">
 				<ul class="sub-menu" id="categorys" data-parent="#sidebar-menu">
 					<li class="">
 						<a class="sidenav-item-link" href="quan_tri.php?p=nhap_them_loai_tin_sanphama">
-							<span class="nav-text">Thêm loại tin sản phẩm</span>
+							<span class="nav-text">Thêm loại tin dự án</span>
 						</a>
 					</li>
 					<li class="">
 						<a class="sidenav-item-link" href="quan_tri.php?p=danhsach_loai_tinsanphama">
-							<span class="nav-text">Danh sách loại tin sản phẩm</span>
+							<span class="nav-text">Danh sách loại tin dự án</span>
 						</a>
 					</li>
 					<li class="">
 						<a class="sidenav-item-link" href="quan_tri.php?p=them_tin_sanphama">
-							<span class="nav-text">Thêm tin sản phẩm </span>
+							<span class="nav-text">Thêm tin dự án </span>
 						</a>
 					</li>
 					<li class="">
 						<a class="sidenav-item-link" href="quan_tri.php?p=ds_tin_sanphama">
-							<span class="nav-text">Danh sách tin sản phẩm  </span>
+							<span class="nav-text">Danh sách tin dự án  </span>
 						</a>
 					</li>
 				</ul>
@@ -152,6 +152,36 @@
 					<li class="">
 						<a class="sidenav-item-link" href="quan_tri.php?p=ds_tin_dichvu">
 							<span class="nav-text">Danh sách Tin dịch vụ</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="has-sub">
+			<a class="sidenav-item-link" href="javascript:void(0)">
+				<i class="mdi mdi-file-document"></i>
+				<span class="nav-text">Quản Lý Mẫu thiết kế </span> <b class="caret"></b>
+			</a>
+			<div class="collapse">
+				<ul class="sub-menu" id="categorys" data-parent="#sidebar-menu">
+					<li class="">
+						<a class="sidenav-item-link" href="quan_tri.php?p=nhap_them_loai_tin_sanpham">
+							<span class="nav-text">Thêm loại tin mẫu thiết kế</span>
+						</a>
+					</li>
+					<li class="">
+						<a class="sidenav-item-link" href="quan_tri.php?p=danhsach_loai_tinsanpham">
+							<span class="nav-text">Danh sách loại tin mẫu thiết kế</span>
+						</a>
+					</li>
+					<li class="">
+						<a class="sidenav-item-link" href="quan_tri.php?p=them_tin_sanpham">
+							<span class="nav-text">Thêm tin mẫu thiết kế </span>
+						</a>
+					</li>
+					<li class="">
+						<a class="sidenav-item-link" href="quan_tri.php?p=ds_tin_sanpham">
+							<span class="nav-text">Danh sách tin mẫu thiết kế  </span>
 						</a>
 					</li>
 				</ul>

@@ -46,7 +46,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 <div class="sidebar-menu">
     <div class="sidebar-title">
-        <b>DANH MỤC MUA BÁN MÁY LẠNH</b>
+        <b>DANH MỤC Dự ÁN</b>
     </div>
     <ul class="list-unstyled sidebar-list">
         <?php $isFirst = true; ?>
@@ -67,7 +67,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                         $productId = (int)$product['productId'];
                         $title = htmlspecialchars(mb_convert_case( $product['tieude'], MB_CASE_TITLE, 'UTF-8' ), ENT_QUOTES, 'UTF-8');
                         $url = htmlspecialchars( $product['linkurl'], ENT_QUOTES, 'UTF-8');
-                        $link = str_replace(',', '', strtolower("tin-san-pham-$url-$productId") ); ?>
+                        $link = str_replace(',', '', strtolower("mau-thiet-ke-$url-$productId") ); ?>
                      
                         <li>
                             <a href="<?= $link ?>" class="sidebar-sublink">

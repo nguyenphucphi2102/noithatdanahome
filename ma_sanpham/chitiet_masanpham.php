@@ -196,7 +196,7 @@ $ma       = $tv_2['ma'];
 
                     <strong class="product-price">
 
-                       0914 454 348 
+                       0935 911 222 
 
                     </strong>
 
@@ -239,7 +239,7 @@ $ma       = $tv_2['ma'];
                 <section class="product-action">
 
                     <a
-                        href="https://zalo.me/0932876323"
+                        href="https://zalo.me/0935911222"
                         target="_blank"
                         class="btn-zalo"
                     >
@@ -247,10 +247,10 @@ $ma       = $tv_2['ma'];
                     </a>
 
                     <a
-                        href="tel:0932876323"
+                        href="tel:0935911222"
                         class="btn-phone"
                     >
-                        📞 0914 454 348 
+                        📞 0935 911 222 
                     </a>
 
                 </section>

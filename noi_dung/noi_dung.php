@@ -9,7 +9,7 @@
     <section class="banner-showcase" id="homeHeroBanner">
         <div class="banner-showcase-track">
             <div class="banner-center-slide">
-                <img src="/images/banner-main-1.avif" alt="Thiết kế nội thất DanaHome"
+                <img src="hinhmenu/banner-main-1.png" alt="Thiết kế nội thất DanaHome"
                     class="banner-center-img">
                 <div class="banner-hero-overlay"></div>
                 <div class="banner-hero-content">
@@ -44,7 +44,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12 reveal-fade">
                     <div class="about-img-box">
-                        <img src="hinhmenu/banner-side-1.avif" alt="Về DanaHome" class="img-fluid main-img">
+                        <img src="hinhmenu/banner-side-1.png" alt="Về DanaHome" class="img-fluid main-img">
                         <div class="about-badge">
                             <h3>5+</h3>
                             <p>Năm Kinh Nghiệm</p>
@@ -109,7 +109,7 @@
             require_once('db.php');
 
             // Lấy danh sách dịch vụ từ CSDL
-            $tv = "SELECT * FROM tin_dichvu ORDER BY id DESC LIMIT 6";
+            $tv = "SELECT * FROM tin_dichvu ORDER BY id DESC LIMIT 3";
             $tv_1 = mysqli_query($link, $tv);
 
             if ($tv_1 && mysqli_num_rows($tv_1) > 0) {
@@ -127,7 +127,7 @@
                     }
 
                     // Đổi tên biến tránh ghi đè biến $link kết nối CSDL
-                    $link_chitiet = "dich-vu-" . $linkurl . "-" . $id;
+                    $link_chitiet = "dich-vu-noi-that-" . $linkurl . "-" . $id;
 
                     // Delay hiệu ứng xuất hiện
                     $delay = $i * 0.1;
@@ -173,12 +173,12 @@
         <!-- Tiêu đề Section -->
         <div class="row align-items-center mb-40">
             <div class="col-lg-6 col-md-12 reveal-fade">
-                <span class="features-badge">DỊCH VỤ CHÚNG TÔI CUNG CẤP</span>
-                <h2 class="pricing-title">CUNG CẤP GIÁ XÂY DỰNG MINH BẠCH, HỢP LÝ</h2>
+                <span class="features-badge">DỊCH VỤ THIẾT KẾ NỘI THẤT</span>
+                <h2 class="pricing-title">THIẾT KẾ NỘI THẤT HIỆN ĐẠI, THÔNG MINH VÀ ĐẸP TỪNG CHI TIẾT</h2>
             </div>
             <div class="col-lg-6 col-md-12 reveal-fade">
                 <p class="pricing-desc">
-                    Với đội ngũ nhân viên chuyên nghiệp, nhiệt tình và sáng tạo, DanaHome luôn nỗ lực để tạo ra những công trình độc đáo, bền vững và hiện đại nhất.
+                    DanaHome mang đến giải pháp thiết kế nội thất trọn gói, tối ưu công năng sử dụng, tạo cảm giác sang trọng và mang dấu ấn riêng cho từng không gian sống.
                 </p>
             </div>
         </div>
@@ -190,19 +190,19 @@
                 <div class="tab-nav-list">
                     <button class="tab-btn active" data-tab="tab-1">
                         <span class="tab-icon"><i class="fa fa-home"></i></span>
-                        <span class="tab-text">Giá xây nhà trọn gói</span>
+                        <span class="tab-text">Thiết kế nội thất căn hộ</span>
                     </button>
                     <button class="tab-btn" data-tab="tab-2">
                         <span class="tab-icon"><i class="fa fa-building"></i></span>
-                        <span class="tab-text">Giá xây dựng phần thô</span>
+                        <span class="tab-text">Thi công nội thất trọn gói</span>
                     </button>
                     <button class="tab-btn" data-tab="tab-3">
                         <span class="tab-icon"><i class="fa fa-wrench"></i></span>
-                        <span class="tab-text">Giá sửa nhà trọn gói</span>
+                        <span class="tab-text">Thi công tủ bếp & đồ gỗ</span>
                     </button>
                     <button class="tab-btn" data-tab="tab-4">
                         <span class="tab-icon"><i class="fa fa-pencil-square-o"></i></span>
-                        <span class="tab-text">Giá thiết kế kiến trúc</span>
+                        <span class="tab-text">Thiết kế kiến trúc nội thất</span>
                     </button>
                 </div>
             </div>
@@ -214,28 +214,28 @@
                     <div class="tab-panel active" id="tab-1">
                         <div class="row align-items-center">
                             <div class="col-lg-7 col-md-12 mb-20">
-                                <span class="card-sub-title">DANAHOME SERVICES</span>
-                                <h3>Xây nhà trọn gói</h3>
+                                <span class="card-sub-title">DANAHOME INTERIOR</span>
+                                <h3>Thiết kế nội thất căn hộ</h3>
                                 <div class="panel-features">
                                     <div class="feature-item">
-                                        <div class="f-icon"><i class="fa fa-globe"></i></div>
+                                        <div class="f-icon"><i class="fa fa-television"></i></div>
                                         <div class="f-text">
-                                            <h5>Miễn phí thiết kế</h5>
-                                            <p>Tặng 100% bản vẽ thiết kế kiến trúc và hồ sơ thi công khi ký hợp đồng dịch vụ trọn gói.</p>
+                                            <h5>Tối ưu không gian sống</h5>
+                                            <p>Thiết kế căn hộ theo phong cách hiện đại, tối giản và tối ưu công năng sinh hoạt cho từng thành viên.</p>
                                         </div>
                                     </div>
                                     <div class="feature-item">
-                                        <div class="f-icon"><i class="fa fa-shield"></i></div>
+                                        <div class="f-icon"><i class="fa fa-star"></i></div>
                                         <div class="f-text">
-                                            <h5>Bảo hành kết cấu 10 năm</h5>
-                                            <p>Cam kết chất lượng công trình lâu dài, hỗ trợ kiểm tra và bảo trì định kỳ cho khách hàng.</p>
+                                            <h5>Phong cách riêng biệt</h5>
+                                            <p>Mỗi không gian được lên ý tưởng theo gu thẩm mỹ, sự tiện nghi và sự hài hòa với môi trường sống.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-5 col-md-12">
                                 <div class="panel-image">
-                                    <img src="/images/banner-main-1.avif" alt="Xây nhà trọn gói">
+                                    <img src="hinhmenu/banner-main-1.png" alt="Thiết kế nội thất căn hộ">
                                 </div>
                             </div>
                         </div>
@@ -245,28 +245,28 @@
                     <div class="tab-panel" id="tab-2">
                         <div class="row align-items-center">
                             <div class="col-lg-7 col-md-12 mb-20">
-                                <span class="card-sub-title">DANAHOME SERVICES</span>
-                                <h3>Xây dựng phần thô</h3>
+                                <span class="card-sub-title">DANAHOME INTERIOR</span>
+                                <h3>Thi công nội thất trọn gói</h3>
                                 <div class="panel-features">
                                     <div class="feature-item">
                                         <div class="f-icon"><i class="fa fa-cubes"></i></div>
                                         <div class="f-text">
-                                            <h5>Vật tư tiêu chuẩn cao</h5>
-                                            <p>Cam kết sử dụng sắt thép, xi măng, gạch đá đúng chuẩn thương hiệu uy tín.</p>
+                                            <h5>Thi công chuẩn xác</h5>
+                                            <p>Thi công theo bản vẽ kỹ thuật, bề mặt tỉ mỉ, vật liệu đạt tiêu chuẩn và thời gian thực hiện rõ ràng.</p>
                                         </div>
                                     </div>
                                     <div class="feature-item">
                                         <div class="f-icon"><i class="fa fa-users"></i></div>
                                         <div class="f-text">
-                                            <h5>Giám sát liên tục</h5>
-                                            <p>Đội ngũ kỹ sư túc trực tại công trình đảm bảo thi công đúng tiến độ và kết cấu.</p>
+                                            <h5>Đội ngũ chuyên nghiệp</h5>
+                                            <p>Nhân sự kỹ thuật và thợ thi công giàu kinh nghiệm, kiểm soát tiến độ và chất lượng từng hạng mục.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-5 col-md-12">
                                 <div class="panel-image">
-                                    <img src="/images/banner-main-2.avif" alt="Xây dựng phần thô">
+                                    <img src="hinhmenu/banner-main-2.png" alt="Thi công nội thất trọn gói">
                                 </div>
                             </div>
                         </div>
@@ -276,28 +276,28 @@
                     <div class="tab-panel" id="tab-3">
                         <div class="row align-items-center">
                             <div class="col-lg-7 col-md-12 mb-20">
-                                <span class="card-sub-title">DANAHOME SERVICES</span>
-                                <h3>Sửa nhà trọn gói</h3>
+                                <span class="card-sub-title">DANAHOME INTERIOR</span>
+                                <h3>Thi công tủ bếp & đồ gỗ</h3>
                                 <div class="panel-features">
                                     <div class="feature-item">
                                         <div class="f-icon"><i class="fa fa-clock-o"></i></div>
                                         <div class="f-text">
-                                            <h5>Thi công nhanh chóng</h5>
-                                            <p>Cải tạo, nâng cấp không gian sống tối ưu thời gian và hạn chế ảnh hưởng sinh hoạt.</p>
+                                            <h5>Vật liệu bền đẹp</h5>
+                                            <p>Sử dụng gỗ MDF, laminate, acrylic hoặc gỗ cao cấp theo yêu cầu, mang lại độ bền và thẩm mỹ lâu dài.</p>
                                         </div>
                                     </div>
                                     <div class="feature-item">
                                         <div class="f-icon"><i class="fa fa-check-circle"></i></div>
                                         <div class="f-text">
-                                            <h5>Tối ưu chi phí</h5>
-                                            <p>Báo giá chi tiết từng mục, không phát sinh chi phí ngoài hợp đồng.</p>
+                                            <h5>Tiện nghi tối ưu</h5>
+                                            <p>Thiết kế theo mô hình lưu trữ khoa học, tối ưu diện tích và giúp việc nấu nướng dễ dàng hơn.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-5 col-md-12">
                                 <div class="panel-image">
-                                    <img src="/images/banner-main-1.avif" alt="Sửa nhà trọn gói">
+                                    <img src="hinhmenu/banner-side-1.png" alt="Thi công tủ bếp và đồ gỗ">
                                 </div>
                             </div>
                         </div>
@@ -307,28 +307,28 @@
                     <div class="tab-panel" id="tab-4">
                         <div class="row align-items-center">
                             <div class="col-lg-7 col-md-12 mb-20">
-                                <span class="card-sub-title">DANAHOME SERVICES</span>
-                                <h3>Thiết kế kiến trúc</h3>
+                                <span class="card-sub-title">DANAHOME INTERIOR</span>
+                                <h3>Thiết kế kiến trúc nội thất</h3>
                                 <div class="panel-features">
                                     <div class="feature-item">
                                         <div class="f-icon"><i class="fa fa-paint-brush"></i></div>
                                         <div class="f-text">
-                                            <h5>Đa dạng phong cách</h5>
-                                            <p>Cập nhật xu hướng thiết kế Hiện đại, Tân cổ điển, Indochine sáng tạo.</p>
+                                            <h5>Phong cách đa dạng</h5>
+                                            <p>Hiện đại, tối giản, tân cổ điển, Scandinavian hoặc phong cách mang dấu ấn riêng theo sở thích khách hàng.</p>
                                         </div>
                                     </div>
                                     <div class="feature-item">
                                         <div class="f-icon"><i class="fa fa-file-image-o"></i></div>
                                         <div class="f-text">
                                             <h5>Hình ảnh 3D chân thực</h5>
-                                            <p>Cung cấp góc nhìn thực tế công trình trước khi tiến hành xây dựng.</p>
+                                            <p>Trình bày mô hình 3D rõ nét, giúp khách hàng hình dung không gian trước khi thi công.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-5 col-md-12">
                                 <div class="panel-image">
-                                    <img src="/images/banner-main-2.avif" alt="Thiết kế kiến trúc">
+                                    <img src="hinhmenu/banner-main-1.png" alt="Thiết kế kiến trúc nội thất">
                                 </div>
                             </div>
                         </div>
@@ -338,7 +338,7 @@
             </div>
         </div>
     </div>
-</section>s
+</section>
 
  
    <!-- Dự án & Mẫu thiết kế -->
@@ -346,7 +346,7 @@
     <div class="container">
         <div class="section-heading text-center reveal-fade">
             <span class="sub-title">BỘ SƯU TẬP</span>
-            <h2>Dự Án & Mẫu Thiết Kế Nổi Bật</h2>
+            <h2>Dự Án </h2>
             <span class="heading-underline"></span>
         </div>
 
@@ -363,7 +363,7 @@
                     $tieude       = htmlspecialchars($row['tieude']);
                     $linkurl      = $row['linkurl'];
                     $link_hinh    = "HinhCTSP/Hinhdichvu/" . $row['hinhanh'];
-                    $link_chitiet = "tin-san-pham-" . $linkurl . "-" . $id;
+                    $link_chitiet = "du-an-noi-that-" . $linkurl . "-" . $id;
                     
                     // Lấy danh mục/mô tả ngắn nếu có, mặc định là 'Dự án nổi bật'
                     $danhmuc     = !empty($row['thuocloai']) ? htmlspecialchars($row['thuocloai']) : 'Dự án nổi bật';
@@ -373,7 +373,7 @@
                             <img src="<?php echo $link_hinh; ?>" alt="<?php echo $tieude; ?>" loading="lazy">
                             <div class="project-overlay">
                                 <div class="overlay-content">
-                                    <span><?php echo $danhmuc; ?></span>
+                                  
                                     <h4><?php echo $tieude; ?></h4>
                                     <a href="<?php echo $link_chitiet; ?>" class="view-btn">
                                         <i class="fa fa-search"></i>
@@ -568,7 +568,7 @@
                     }
 
                     // Tên biến URL chi tiết (đổi tên để tránh đè biến $link CSDL)
-                    $link_chitiet = "thong-tin-" . $linkurl . "-" . $id;
+                    $link_chitiet = "tin-tuc-noi-that-" . $linkurl . "-" . $id;
 
                     // Danh mục & Ngày tháng (Lấy từ DB nếu có, hoặc dùng giá trị mặc định)
                     $danhmuc     = !empty($row['thuocloai']) ? htmlspecialchars($row['thuocloai']) : 'Tin tức';
@@ -610,13 +610,32 @@
     </div>
 </section>
 
-   
+<section class="home-contact-cta" style="position: relative; overflow: hidden; background: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; padding: 90px 0;">
+    <div style="position:absolute; inset:0; background: rgba(13, 13, 13, 0.62);"></div>
+    <div class="container" style="position:relative; z-index:1;">
+        <div class="row align-items-center justify-content-between text-center text-lg-start">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <span style="display:inline-block; margin-bottom:12px; color:#d6b07d; font-weight:700; letter-spacing:2px; text-transform:uppercase; font-size:12px;">Liên hệ</span>
+                <h2 style="margin:0; color:#fff; font-size: clamp(28px, 4vw, 42px); font-weight:700; line-height:1.2;">
+                    Tư vấn thiết kế nội thất phù hợp với không gian của bạn
+                </h2>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div style="display:flex; flex-direction:column; gap:14px; align-items:center; justify-content:center;">
+                    <a href="tel:0935911222" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; background:#cea679; color:#fff; padding:14px 26px; border-radius:999px; font-weight:700; text-decoration:none; min-width:220px;">
+                        <i class="fa fa-phone"></i> Gọi ngay: 0935 911 222
+                    </a>
+                    <a href="lien-he" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; border:1px solid rgba(255,255,255,0.7); color:#fff; padding:14px 26px; border-radius:999px; font-weight:600; text-decoration:none; min-width:220px;">
+                        <i class="fa fa-envelope"></i> Liên hệ tư vấn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 </main>
 
-<!-- Nút cuộn lên đầu trang -->
-<button id="backToTop" class="back-to-top" aria-label="Lên đầu trang">
-    <i class="fa fa-chevron-up"></i>
-</button>
 <script src="sitebds/js/trangchu.js"></script>
 <script src="https://kit.fontawesome.com/8c204d0fdf.js" crossorigin="anonymous"></script>
 <script src="js/modernizr-2.8.3.min.js"></script>

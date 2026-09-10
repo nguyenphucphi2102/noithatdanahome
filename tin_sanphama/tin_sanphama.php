@@ -1,6 +1,6 @@
 <!--link css-->
 <link rel="stylesheet" href="sitebds/css/css_chitiettintuc.css">
-<link rel="stylesheet" href="sitebds/css/trangchu.css">
+
 
 
 
@@ -27,7 +27,7 @@
                 <div class="criteria-box-wrapper">
                     <div class="video-thumb-box">
                         <img src="HinhCTSP/Hinhdichvu/banner-side-1.avif" alt="Video quy trình thi công">
-                        <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" class="play-btn-overlay" target="_blank">
+                        <a href="https://www.youtube.com/watch?v=3S9v_78y_08" class="play-btn-overlay" target="_blank">
                             <i class="fa fa-play"></i>
                         </a>
                     </div>
@@ -48,7 +48,7 @@
                         </div>
                         <div class="phone-text">
                             <span>Tư vấn nội thất?</span>
-                            <a href="tel:0914454348" class="phone-number">(+84) 0914-454-348</a>
+                            <a href="tel:0935911222" class="phone-number">(+84) 0935-911-222</a>
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@ Khám phá danh mục dự án ấn tượng</h2>
           $tieude = $row['tieude'];
           $linkurl = $row['linkurl'];
           $mota = $row['mota'];
-          $link = "tin-san-pham-$linkurl-$id";
+          $link = "du-an-noi-that-$linkurl-$id";
      ?>
         <li class="tintuc-item">
             <article class="tintuc-card">
@@ -102,27 +102,24 @@ Khám phá danh mục dự án ấn tượng</h2>
 (function () {
   "use strict";
   const revealEls = document.querySelectorAll(".reveal");
-  if (revealEls.length) {
-    let revealCounter = 0;
-    revealEls.forEach((el) => {
-      const uniqueId = "rv-" + revealCounter++;
-      el.setAttribute("data-reveal-id", uniqueId);
-    });
+  if (!revealEls.length) return;
 
-    const revealIO = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const uniqueId = entry.target.getAttribute("data-reveal-id");
-          if (entry.intersectionRatio > 0.15) {
-            entry.target.classList.add("revealed-" + uniqueId);
-          } else if (entry.intersectionRatio === 0) {
-            entry.target.classList.remove("revealed-" + uniqueId);
-          }
-        });
-      },
-      { threshold: [0, 0.15] }
-    );
-    revealEls.forEach((el) => revealIO.observe(el));
-  }
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-active");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+  );
+
+  revealEls.forEach((el, index) => {
+    const delay = Number(el.dataset.delay || index * 0.08);
+    el.style.transitionDelay = `${delay}s`;
+    revealObserver.observe(el);
+  });
 })();
 </script>

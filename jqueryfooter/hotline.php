@@ -399,7 +399,7 @@
     </style>
 
 
-    <a href="https://zalo.me/0914 454 348 " class="suntory-alo-phone suntory-alo-green" id="suntory-alo-phoneIcon" style="  left: 0px; bottom: 70px;">
+    <a href="https://zalo.me/0935911222" class="suntory-alo-phone suntory-alo-green" id="suntory-alo-phoneIcon" style="  left: 0px; bottom: 70px;">
         <div class="suntory-alo-ph-circle"></div>
         <div class="suntory-alo-ph-circle-fill"></div>
         <div class="suntory-alo-ph-img-circle"><img src="hinhmenu/icon-zalo.gif" style="width: 100%; height: auto;" />
@@ -407,10 +407,10 @@
     </a>
 
 
-    <a href="tel:0914 454 348 " class="suntory-alo-phone suntory-alo-green" id="suntory-alo-phoneIcon"
+    <a href="tel:0935911222" class="suntory-alo-phone suntory-alo-green" id="suntory-alo-phoneIcon"
         style="left: 0px; bottom: 0px;">
         <div class="callmeText">
-            <span class="phone_text">0914 454 348 </span>
+            <span class="phone_text">0935 911 222</span>
         </div>
         <div class="suntory-alo-ph-circle"></div>
         <div class="suntory-alo-ph-circle-fill"></div>

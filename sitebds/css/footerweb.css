@@ -1,11 +1,11 @@
 .ftr__accent-bar {
   height: 4px;
-  background: linear-gradient(90deg, #4f633f 0%, #145f66 50%, #d5b579 100%);
+  background: linear-gradient(90deg, #111111 0%, #cea679 50%, #111111 100%);
 }
 .ftr__main {
   padding: 64px 0 48px;
   position: relative;
-  background: #222222;
+  background: #111111;
 }
 
 /* Hoa văn nền nhẹ */
@@ -46,15 +46,15 @@
 .ftr__brand-icon {
   width: 46px;
   height: 46px;
-  background: linear-gradient(135deg, #4f633f, #145f66);
+  background: linear-gradient(135deg, #cea679, #b98d4d);
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 22px;
-  color: #d5b579;
+  color: #111111;
   flex-shrink: 0;
-  box-shadow: 0 4px 14px rgba(20, 95, 102, 0.35);
+  box-shadow: 0 4px 14px rgba(206, 166, 121, 0.35);
 }
 
 .ftr__brand-name {
@@ -67,7 +67,15 @@
 }
 
 .ftr__brand-name span {
-  color: #d5b579;
+  color: #cea679;
+}
+
+.ftr__brand-name,
+.ftr__heading,
+.ftr__tagline-text,
+.ftr__contact-text a,
+.ftr__copyright strong {
+  font-family: "Open Sans", sans-serif;
 }
 
 /* Mô tả */
@@ -90,7 +98,7 @@
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #d5b579;
+  color: #cea679;
   text-transform: uppercase;
 }
 
@@ -150,6 +158,11 @@
   box-shadow: 0 6px 16px rgba(0, 104, 255, 0.4);
 }
 
+.ftr__links li a:hover,
+.ftr__contact-text a:hover {
+  color: #cea679;
+}
+
 /* ===== Tiêu đề cột ===== */
 .ftr__heading {
   font-size: 14px;
@@ -171,6 +184,14 @@
   background: #d5b579;
   flex-shrink: 0;
   box-shadow: 0 0 0 3px rgba(213, 181, 121, 0.25);
+}
+
+.ftr__links li a,
+.ftr__contact-text,
+.ftr__brand-desc,
+.ftr__copyright,
+.ftr__cert-badge {
+  font-family: "Open Sans", sans-serif;
 }
 
 /* ===== Danh sách link ===== */

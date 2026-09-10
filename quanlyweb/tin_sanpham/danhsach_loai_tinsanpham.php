@@ -12,7 +12,7 @@
 					</p>
 				</div>
 				<div>
-					<a href="quan_tri.php?p=them_tin_sanpham" class="btn btn-primary"> Thêm dịch vụ</a>
+					<a href="quan_tri.php?p=them_tin_sanpham" class="btn btn-primary"> Thêm mẫu thiết kế</a>
 				</div>
 			</div>
 			<div class="row">
@@ -153,47 +153,44 @@
 							<div class="table-responsive">
 								<table id="responsive-data-table" class="table" style="width:100%">
 									<thead>
-										<tr>
-											<th>ID</th>
-											<th>Loại hệ thống phân phối</th>
-											<th>Icon</th>
-											<th>Xóa</th>
-											<th>Sửa</th>
-										</tr>
-									</thead>
+    <tr>
+        <th>ID</th>
+        <th>Loại hệ thống phân phối</th>
+        <th>Icon</th>
+        <th>URL</th>
+        <th>Xóa</th>
+        <th>Sửa</th>
+    </tr>
+</thead>
 
-									<tbody>
-										<?php
-										while ($row = mysqli_fetch_object($result)) {
-											$id = $row->id;
-											$noidung = $row->thuocloai;
-											$noidung_en = $row->thuocloai_en;
-											$hinhanh = "../HinhCTSP/" . $row->hinhanh;
-											$hinhanh = "<img src='$hinhanh' width='40' height='20' '>";
-											$logo = "../HinhCTSP/" . $row->logo;
-											$logo = "<img src='$logo' width='40' height='20' '>";
-											?>
-											<tr>
-												<td><?php echo "$id"; ?></td>
-												<td><?php echo "$noidung"; ?></td>
-												<td><?php echo "$hinhanh"; ?></td>
-												<td>
-													<a href="quan_tri.php?p=xoa_loai_tinsanpham&id=<?= $id ?>"
-														onclick="return confirm('Bạn có muốn xóa thông tin này ?')">
-														<button class="btn btn-danger">Xóa</button>
-													</a>
-												</td>
-
-												<td>
-													<a
-														href="quan_tri.php?p=sua_loai_tinsanpham&id=<?= $id ?>&thuocloai=1&page=<?= $_GET['page'] ?>">
-														<button class="btn btn-warning">Sửa</button>
-													</a>
-												</td>
-
-											</tr>
-										<?php } ?>
-									</tbody>
+<tbody>
+    <?php
+    while ($row = mysqli_fetch_object($result)) {
+        $id      = $row->id;
+        $noidung = $row->thuocloai;
+        $hinhanh = "../HinhCTSP/" . $row->hinhanh;
+        $hinhanh = "<img src='$hinhanh' width='40' height='20' '>";
+        $linkurl = $row->linkurl;
+        ?>
+        <tr>
+            <td><?php echo "$id"; ?></td>
+            <td><?php echo "$noidung"; ?></td>
+            <td><?php echo "$hinhanh"; ?></td>
+            <td><?php echo "$linkurl"; ?></td>
+            <td>
+                <a href="quan_tri.php?p=xoa_loai_tinsanpham&id=<?= $id ?>"
+                    onclick="return confirm('Bạn có muốn xóa thông tin này ?')">
+                    <button class="btn btn-danger">Xóa</button>
+                </a>
+            </td>
+            <td>
+                <a href="quan_tri.php?p=sua_loai_tinsanpham&id=<?= $id ?>&thuocloai=1&page=<?= $_GET['page'] ?>">
+                    <button class="btn btn-warning">Sửa</button>
+                </a>
+            </td>
+        </tr>
+    <?php } ?>
+</tbody>
 								</table>
 							</div>
 						</div>

@@ -10,29 +10,29 @@ RewriteRule  ^trang-chu$ index.php
 RewriteRule  ^gioithieu-thietke-noithat$ index.php?thamso=gioi_thieu
 RewriteRule  ^gioithieu-ve-(.*)-(.*)$ chitiet.php?thamso=chitiet_gioithieu&url=$1&id=$2
 
-RewriteRule  ^thumua-nhaxuong$ chitiet.php?thamso=tin_sanpham
-RewriteRule  ^thumua-docu-(.*)-(.*)$ chitiet.php?thamso=tin_sanphamct&url=$1&id=$2
-RewriteRule  ^thu-mua-(.*)-(.*)$ chitiet.php?thamso=chitiet_tinsanpham&url=$1&id=$2
 
-RewriteRule  ^sanphaminan-thechip$ chitiet.php?thamso=tin_sanphama
-RewriteRule  ^sanphaminan-thechip-(.*)-(.*)$ chitiet.php?thamso=tin_sanphamact&url=$1&id=$2
-RewriteRule  ^cung-cap/(.*)$ chitiet.php?thamso=tin_sanphamact&url=$1&id=$2
-RewriteRule  ^tin-san-pham-(.*)-(.*)$ chitiet.php?thamso=chitiet_tinsanphama&url=$1&id=$2
+RewriteRule  ^san-pham$ chitiet.php?thamso=tin_sanpham
+RewriteRule  ^danh-muc-san-pham-(.*)-(.*)$ chitiet.php?thamso=chitiet_tinsanpham&url=$1&id=$2
+RewriteRule  ^mau-thiet-ke/(.*)$ chitiet.php?thamso=tin_sanphamct&url=$1&id=$2 [L,QSA]
+RewriteRule  ^thiet-ke-(.*)-(.*)$ chitiet.php?thamso=chitiet_tinsanpham&url=$1&id=$2 [L,QSA]
 
-RewriteRule  ^dichvu-inthe$ chitiet.php?thamso=tin_dichvu
-RewriteRule  ^banggia-phelieu-(.*)-(.*)$ chitiet.php?thamso=tin_dichvuct&url=$1&id=$2
-RewriteRule  ^dich-vu-(.*)-(.*)$ chitiet.php?thamso=chitiet_tindichvu&url=$1&id=$2
-RewriteRule  ^dich-vu/([a-zA-Z0-9_-]+)/$ chitiet.php?thamso=tin_dichvuct&url=$1&id=$1
-RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+).html$ index.php?thamso=chitiet_tindichvu&url=$1&id=$2
 
-RewriteRule  ^muaban-docubinhduong$ chitiet.php?thamso=tin_sanphamab
-RewriteRule  ^muaban-docu-(.*)-(.*)$ chitiet.php?thamso=tin_sanphamabct&url=$1&id=$2
-RewriteRule  ^san-pham-(.*)-(.*)$ chitiet.php?thamso=chitiet_tinsanphamab&url=$1&id=$2
+RewriteRule  ^du-an-noi-that$ chitiet.php?thamso=tin_sanphama
+RewriteRule  ^du-an-noi-that-(.*)-(.*)$ chitiet.php?thamso=chitiet_tinsanphama&url=$1&id=$2
+RewriteRule  ^cung-cap/(.*)$ chitiet.php?thamso=tin_sanphamact&url=$1&id=$2 [L,QSA]
+RewriteRule  ^tin-san-pham-(.*)-(.*)$ chitiet.php?thamso=chitiet_tinsanphama&url=$1&id=$2 [L,QSA]
 
-RewriteRule  ^tintuc-inanthechip$ chitiet.php?thamso=tin_tintuc
-RewriteRule  ^tintuc-inanthechip-(.*)-(.*)$ chitiet.php?thamso=tin_tintucct&url=$1&id=$2
-RewriteRule  ^thong-tin-(.*)-(.*)$ chitiet.php?thamso=chitiet_tintintuc&url=$1&id=$2
-RewriteRule  ^thong-tin-(.*)/(.*)$ chitiet.php?thamso=chitiet_tintintuc&url=$1&id=$2
+RewriteRule  ^dich-vu-noi-that$ chitiet.php?thamso=tin_dichvu
+RewriteRule  ^dich-vu-noi-that-(.*)-(.*)$ chitiet.php?thamso=chitiet_tindichvu&url=$1&id=$2
+RewriteRule  ^dich-vu-(.*)-(.*)$ chitiet.php?thamso=chitiet_tindichvu&url=$1&id=$2 [L,QSA]
+RewriteRule  ^dich-vu/([a-zA-Z0-9_-]+)/$ chitiet.php?thamso=tin_dichvuct&url=$1&id=$1 [L,QSA]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+).html$ index.php?thamso=chitiet_tindichvu&url=$1&id=$2 [L,QSA]
+
+
+RewriteRule  ^tin-tuc-noi-that$ chitiet.php?thamso=tin_tintuc
+RewriteRule  ^tin-tuc-noi-that-(.*)-(.*)$ chitiet.php?thamso=chitiet_tintintuc&url=$1&id=$2
+RewriteRule  ^thong-tin-(.*)-(.*)$ chitiet.php?thamso=chitiet_tintintuc&url=$1&id=$2 [L,QSA]
+RewriteRule  ^thong-tin-(.*)/(.*)$ chitiet.php?thamso=chitiet_tintintuc&url=$1&id=$2 [L,QSA]
 
 RewriteRule  ^lien-he$ index.php?thamso=lien_he [L,QSA]
 

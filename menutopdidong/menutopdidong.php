@@ -10,22 +10,22 @@
         <ul class="topbar-left">
             <li>
                 <span class="icon-wrap"><i class="fa-regular fa-clock"></i></span>
-                Hotline: <strong>0914 454 348</strong>
+                Hotline: <strong>0935 911 222</strong>
             </li>
         </ul>
  
         <ul class="topbar-right">
             <li>
-                <a href="mailto:info@dienlanhtantai.com">
+                <a href="mailto:danahome222@gmail.com">
                     <i class="fa-regular fa-envelope"></i>
-                    Kinhdoanhatv@gmail.com
+                    danahome222@gmail.com
                 </a>
             </li>
             <li class="topbar-social">
-                <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" target="_blank" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" target="_blank" aria-label="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="#" target="_blank">Zalo</a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://zalo.me/0935911222" target="_blank" rel="noopener noreferrer" aria-label="Zalo">Zalo</a>
             </li>
         </ul>
  
@@ -78,7 +78,7 @@
 
                 <li class="menuatv-li menuatv-has-sub">
 
-                    <a href="sanphaminan-thechip">
+                    <a href="du-an-noi-that">
                       Dự án
                         <span class="menuatv-arrow">▼</span>
                     </a>
@@ -111,14 +111,10 @@
 
 
               
-                
-
-                
-
 
                  <li class="menuatv-li menuatv-has-sub">
 
-                    <a href="dichvu-inthe">
+                    <a href="dich-vu-noi-that">
                       Dịch vụ
                         <span class="menuatv-arrow">▼</span>
                     </a>
@@ -142,9 +138,37 @@
 
                 </li>
 
+                <li class="menuatv-li menuatv-has-sub">
+
+                    <a href="san-pham">
+                      Mẫu thiết kế
+                        <span class="menuatv-arrow">▼</span>
+                    </a>
+
+                    <ul class="menuatv-submenu">
+
+                         <?php
+                        $tv1 = "select * from loai_tin_sanpham order by id DESC ";
+                        $tv_11 = mysqli_query($link, $tv1);
+                        while ($tv_21 = mysqli_fetch_array($tv_11)) {
+                            $id        = $tv_21['id'];
+                            $thuocloai = $tv_21['thuocloai'];
+                            $linkurl   = strtolower($tv_21['linkurl']);
+                            ?>
+                            <li class="menuatv-sub-li">
+                                <a style="color:#222222" href="mau-thiet-ke/<?php echo $linkurl; ?>">
+                                    <?php echo $thuocloai; ?>
+                                </a>
+                            </li>
+                        <?php } ?>
+
+                    </ul>
+
+                </li>
+
 					 
                 <li class="menuatv-li">
-                    <a href="tintuc-inanthechip">Tin tức</a>
+                    <a href="tin-tuc-noi-that">Tin tức</a>
                 </li>
 
                 <li class="menuatv-li">
@@ -163,7 +187,7 @@
             </div>
             <div class="hotline-text">
                 <span class="hotline-label">Hotline</span>
-                <a href="tel:0914454348" class="hotline-number">(+84) 0914-454-348</a>
+                <a href="tel:0935911222" class="hotline-number">(+84) 0935-911-222</a>
             </div>
         </div>
 
@@ -187,11 +211,13 @@
 
         <li><a href="gioithieu-thietke-noithat">Giới thiệu</a></li>
         
-        <li><a href="sanphaminan-thechip">Dự án</a></li>
+        <li><a href="du-an-noi-that">Dự án</a></li>
 
-        <li><a href="dichvu-inthe">  Dịch vụ </a></li>
+        <li><a href="dich-vu-noi-that">  Dịch vụ </a></li>
+
+        <li><a href="san-pham">  Mẫu thiết kế </a></li>
         
-        <li><a href="tintuc-inanthechip">Tin tức</a></li>
+        <li><a href="tin-tuc-noi-that">Tin tức</a></li>
 
         <li><a href="lien-he">Liên hệ</a></li>
 

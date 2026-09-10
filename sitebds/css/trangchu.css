@@ -216,25 +216,38 @@ img {
 /*----------------------------------------*/
 /*  03. Scroll Reveal animation
 /*----------------------------------------*/
-.reveal-fade {
+.reveal-fade,
+.reveal-right,
+.reveal-left,
+.reveal {
   opacity: 0;
-  transform: translateY(40px);
+  will-change: opacity, transform;
   transition:
     opacity 0.8s ease,
-    transform 0.8s ease;
+    transform 0.8s ease,
+    filter 0.8s ease;
+}
+
+.reveal-fade {
+  transform: translateY(40px);
 }
 
 .reveal-right {
-  opacity: 0;
   transform: translateX(50px);
-  transition:
-    opacity 0.8s ease,
-    transform 0.8s ease;
+}
+
+.reveal-left {
+  transform: translateX(-50px);
+}
+
+.reveal {
+  transform: translateY(26px);
 }
 
 .reveal-active {
   opacity: 1;
-  transform: translate(0);
+  transform: translate(0, 0);
+  filter: none;
 }
 
 /*----------------------------------------*/
@@ -974,20 +987,6 @@ img {
   transform: translateY(20px);
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   outline: none;
-}
-
-.back-to-top.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.back-to-top:hover {
-  background-color: #cea679;
-  color: #ffffff;
-  border-color: #cea679;
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 575px) {

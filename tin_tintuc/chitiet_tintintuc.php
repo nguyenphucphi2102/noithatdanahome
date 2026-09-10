@@ -146,7 +146,7 @@ if (mysqli_num_rows($result) > 0) {
 
                 $mota = $row['mota'];
 
-                $link = "thong-tin-$linkurl-$id";
+                $link = "tin-tuc-noi-that-$linkurl-$id";
             ?>
                 <li>
                  <a href="<?php echo $link; ?>">
@@ -198,7 +198,7 @@ if (mysqli_num_rows($result) > 0) {
         $mota      = $row['mota'];
         $url       = $row['linkurl'];
 
-        $link_bai = "thong-tin-$url-$id";
+        $link_bai = "tin-tuc-noi-that-$url-$id";
     ?>
 
         <article class="tintuc-bds-news-item">

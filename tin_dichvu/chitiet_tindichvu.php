@@ -140,7 +140,7 @@ while ($row = mysqli_fetch_array($tv_1)) {
 
     $mota = $row['mota'];
 
-    $link = "dich-vu-$linkurl-$id";
+    $link = "dich-vu-noi-that-$linkurl-$id";
 ?>
                 <li>
                  <a href="<?php echo $link; ?>">
@@ -191,7 +191,7 @@ while ($row = mysqli_fetch_array($tv_1)) {
         $mota      = $row['mota'];
         $url       = $row['linkurl'];
 
-        $link_bai = "thong-tin-$url-$id";
+        $link_bai = "tin-tuc-noi-that-$url-$id";
     ?>
 
         <article class="tintuc-bds-news-item">
